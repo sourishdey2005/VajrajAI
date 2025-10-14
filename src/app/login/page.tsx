@@ -26,45 +26,55 @@ export default function LoginPage() {
       >
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
-      <header className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <Logo />
-        <nav className="hidden md:flex items-center gap-8 justify-center flex-1">
-          <Link
-            href="/#features"
-            className="text-sm font-medium text-white hover:text-primary transition-colors"
-          >
-            Features
-          </Link>
-          <Link
-            href="/#working"
-            className="text-sm font-medium text-white hover:text-primary transition-colors"
-          >
-            Working
-          </Link>
-          <Link
-            href="/#tech-stack"
-            className="text-sm font-medium text-white hover:text-primary transition-colors"
-          >
-            Technology
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm font-medium text-white hover:text-primary transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="/#team"
-            className="text-sm font-medium text-white hover:text-primary transition-colors"
-          >
-            Team
-          </Link>
-        </nav>
-        <Button variant="outline" asChild>
-          <Link href="/dashboard">Go to Dashboard</Link>
-        </Button>
+      <header className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          <div className="flex-1 flex justify-start">
+              <Logo />
+          </div>
+          <nav className="hidden md:flex items-center gap-8 justify-center flex-1">
+              <Link
+                  href="/#features"
+                  className="text-sm font-medium text-white hover:text-primary transition-colors"
+              >
+                  Features
+              </Link>
+              <Link
+                  href="/#working"
+                  className="text-sm font-medium text-white hover:text-primary transition-colors"
+              >
+                  Working
+              </Link>
+              <Link
+                  href="/#benefits"
+                  className="text-sm font-medium text-white hover:text-primary transition-colors"
+              >
+                  Benefits
+              </Link>
+              <Link
+                  href="/#tech-stack"
+                  className="text-sm font-medium text-white hover:text-primary transition-colors"
+              >
+                  Technology
+              </Link>
+              <Link
+                  href="/#team"
+                  className="text-sm font-medium text-white hover:text-primary transition-colors"
+              >
+                  Team
+              </Link>
+              <Link
+                  href="/about"
+                  className="text-sm font-medium text-white hover:text-primary transition-colors"
+              >
+                  About
+              </Link>
+          </nav>
+          <div className="flex-1 flex justify-end">
+              <Button asChild>
+                  <Link href="/dashboard">Go to Dashboard</Link>
+              </Button>
+          </div>
       </header>
-      <main className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-12 md:py-24">
+      <main className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-12 md:py-24 pt-32 md:pt-40">
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-6xl">
           <div className="animate-in fade-in slide-in-from-left-24 duration-1000">
             <Tabs defaultValue="manager" className="w-full max-w-md">
