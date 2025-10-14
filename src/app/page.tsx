@@ -534,10 +534,6 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {teamMembers.map((member, index) => {
-                const image = getImage(member.imageId);
-                const avatarImage = image ? image.imageUrl : `https://picsum.photos/seed/person${member.id}/400/400`;
-                const avatarHint = image ? image.imageHint : "professional portrait";
-
                 return (
                   <Card
                     key={member.id}
@@ -546,9 +542,8 @@ export default function Home() {
                   >
                     <CardHeader className="items-center">
                       <Avatar className="h-24 w-24 mb-4">
-                        <AvatarImage src={avatarImage} alt={member.name} data-ai-hint={avatarHint} />
                         <AvatarFallback>
-                          {member.name.charAt(0)}
+                          {member.name.split(' ').map(n => n[0]).join('')}
                         </AvatarFallback>
                       </Avatar>
                       <CardTitle className="font-headline text-xl">
