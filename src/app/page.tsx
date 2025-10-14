@@ -299,7 +299,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button size="lg" asChild>
-                <Link href="https://vajraj-ai-diagonostics.vercel.app/login">
+                <Link href="/dashboard">
                   Go to Dashboard <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

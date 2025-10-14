@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -23,32 +24,32 @@ export function DashboardNav() {
 
   const navItems = [
     {
-      href: '/',
+      href: '/dashboard',
       icon: <LayoutDashboard />,
       label: 'Dashboard',
     },
     {
-      href: '/analysis',
+      href: '/dashboard/analysis',
       icon: <FileText />,
       label: 'Analysis',
     },
     {
-      href: '/how-it-works',
+      href: '/dashboard/how-it-works',
       icon: <Workflow />,
       label: 'How It Works',
     },
     {
-      href: '/benefits',
+      href: '/dashboard/benefits',
       icon: <CheckCircle2 />,
       label: 'Benefits',
     },
     {
-      href: '/technology',
+      href: '/dashboard/technology',
       icon: <Cpu />,
       label: 'Technology',
     },
     {
-      href: '/team',
+      href: '/dashboard/team',
       icon: <Users />,
       label: 'Team',
     },
@@ -65,13 +66,13 @@ export function DashboardNav() {
         <SidebarMenuItem key={item.href}>
           <SidebarMenuButton
             asChild
-            isActive={pathname === item.href || (pathname.startsWith('/dashboard') && item.href !=='/' && pathname.includes(item.href)) || (pathname === '/dashboard' && item.href === '/')}
+            isActive={pathname === item.href}
             tooltip={{
               children: item.label,
               className: 'bg-sidebar-accent text-sidebar-accent-foreground',
             }}
           >
-            <Link href={item.href === '/' ? '/dashboard' : item.href}>
+            <Link href={item.href}>
               {item.icon}
               <span>{item.label}</span>
             </Link>
