@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract background for the hero section",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "technology abstract"
+    },
+    {
+      "id": "feature-import",
+      "description": "Icon representing data import",
+      "imageUrl": "https://picsum.photos/seed/import/512/512",
+      "imageHint": "data upload"
+    },
+    {
+      "id": "feature-detection",
+      "description": "Icon representing AI fault detection",
+      "imageUrl": "https://picsum.photos/seed/detection/512/512",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "feature-maintenance",
+      "description": "Icon representing maintenance recommendations",
+      "imageUrl": "https://picsum.photos/seed/maintenance/512/512",
+      "imageHint": "tools gears"
+    },
+    {
+      "id": "team-member-1",
+      "description": "Photo of team member 1",
+      "imageUrl": "https://picsum.photos/seed/person1/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Photo of team member 2",
+      "imageUrl": "https://picsum.photos/seed/person2/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Photo of team member 3",
+      "imageUrl": "https://picsum.photos/seed/person3/400/400",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "team-member-4",
+      "description": "Photo of team member 4",
+      "imageUrl": "https://picsum.photos/seed/person4/400/400",
+      "imageHint": "professional man"
+    }
+  ]
 }
