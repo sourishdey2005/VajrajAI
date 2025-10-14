@@ -32,7 +32,7 @@ const howItWorksSteps = [
 
 export default function HowItWorksPage() {
   return (
-    <div>
+    <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold font-headline">How It Works</h1>
         <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -47,7 +47,8 @@ export default function HowItWorksPage() {
             <>
               <Card
                 key={step.step}
-                className="w-full transition-all hover:shadow-lg"
+                className="w-full transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-16 duration-1000"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardHeader>
                   <div className="flex items-start gap-6">
@@ -70,7 +71,7 @@ export default function HowItWorksPage() {
               </Card>
               {index < howItWorksSteps.length - 1 && (
                 <div className="flex justify-center">
-                  <ArrowDown className="h-8 w-8 text-muted-foreground/50" />
+                  <ArrowDown className="h-8 w-8 text-muted-foreground/50 animate-bounce" />
                 </div>
               )}
             </>

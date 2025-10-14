@@ -17,7 +17,7 @@ export default function TeamPage() {
   };
 
   return (
-    <div>
+    <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold font-headline">Our Team</h1>
         <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -25,10 +25,10 @@ export default function TeamPage() {
         </p>
       </div>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {teamMembers.map((member) => {
+        {teamMembers.map((member, index) => {
           const image = getImage(member.imageId);
           return (
-            <Card key={member.id} className="text-center transition-all hover:shadow-lg hover:-translate-y-1">
+            <Card key={member.id} className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
               <CardHeader className="items-center">
                 <Avatar className="h-24 w-24 mb-4">
                   {image && (

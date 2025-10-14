@@ -98,7 +98,7 @@ export default function Home() {
 
       <main className="flex-grow">
         <section className="relative py-24 md:py-32 lg:py-40 bg-card">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-12 duration-1000">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter">
               Intelligent Transformer Diagnostics
             </h1>
@@ -128,7 +128,7 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               {features.map((feature, index) => (
-                <Card key={index} className="flex flex-col items-center text-center p-6 transition-transform transform hover:-translate-y-2">
+                <Card key={index} className="flex flex-col items-center text-center p-6 transition-transform transform hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
                   <CardHeader>
                     {feature.icon}
                     <CardTitle className="mt-4 font-headline">{feature.title}</CardTitle>
@@ -151,8 +151,8 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-16 grid gap-12 md:grid-cols-3">
-              {howItWorksSteps.map((step) => (
-                <div key={step.step} className="relative text-center">
+              {howItWorksSteps.map((step, index) => (
+                <div key={step.step} className="relative text-center animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
                   <div className="flex items-center justify-center">
                     <div className="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground text-3xl font-bold font-headline">
                       {step.step}
@@ -176,7 +176,7 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="flex flex-col justify-between">
+                <Card key={index} className="flex flex-col justify-between animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
                   <CardHeader>
                     <Quote className="h-8 w-8 text-primary" />
                   </CardHeader>
