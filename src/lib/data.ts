@@ -64,10 +64,10 @@ export const dashboardStats = [
 ];
 
 export const faultsBySeverityData = [
-  { name: 'Low', value: 150, fill: 'var(--color-chart-1)' },
-  { name: 'Medium', value: 75, fill: 'var(--color-chart-2)' },
-  { name: 'High', value: 45, fill: 'var(--color-chart-3)' },
-  { name: 'Critical', value: 38, fill: 'var(--color-chart-4)' },
+  { name: 'Low', value: 150, fill: 'hsl(var(--chart-1))' },
+  { name: 'Medium', value: 75, fill: 'hsl(var(--chart-2))' },
+  { name: 'High', value: 45, fill: 'hsl(var(--chart-3))' },
+  { name: 'Critical', value: 38, fill: 'hsl(var(--chart-4))' },
 ];
 export const faultsBySeverityConfig = {
   value: {
