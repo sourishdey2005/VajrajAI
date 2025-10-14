@@ -286,11 +286,11 @@ export default function Home() {
             </header>
           <div className="absolute inset-0 bg-black/60 z-0"></div>
           <Image
-            src="https://picsum.photos/seed/lightning/1920/1080"
+            src="https://picsum.photos/seed/hero-background/1920/1080"
             alt="Hero background"
             fill
             className="object-cover -z-10"
-            data-ai-hint="lightning strike"
+            data-ai-hint="lightning strike dramatic"
           />
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in slide-in-from-bottom-24 duration-1000">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter text-white">
@@ -635,6 +635,7 @@ export default function Home() {
     
 
     
+
 
 
 
