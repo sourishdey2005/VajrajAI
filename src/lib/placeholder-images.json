@@ -47,6 +47,18 @@
       "description": "Photo of team member 4",
       "imageUrl": "https://picsum.photos/seed/person4/400/400",
       "imageHint": "professional man"
+    },
+    {
+      "id": "landing-hero",
+      "description": "Hero image for the landing page",
+      "imageUrl": "https://picsum.photos/seed/landinghero/1920/1080",
+      "imageHint": "power grid technology"
+    },
+    {
+      "id": "transformer-illustration",
+      "description": "An illustration of a power transformer",
+      "imageUrl": "https://picsum.photos/seed/transformer/1200/800",
+      "imageHint": "electrical transformer"
     }
   ]
 }
