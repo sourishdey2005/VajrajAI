@@ -47,7 +47,12 @@ export default function DashboardPage() {
   const icons = [<Activity />, <ShieldAlert />, <Wrench />, <Activity />];
 
   return (
-    <div className="grid gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000">
+    <div className="grid gap-8 animate-in fade-in slide-in-from-bottom-16 duration-1000">
+      <div>
+        <h1 className="text-3xl font-bold font-headline">Welcome back, Field Engineer!</h1>
+        <p className="text-muted-foreground mt-1">Here's a snapshot of your transformer fleet's health.</p>
+      </div>
+
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {dashboardStats.map((stat, index) => (
           <Card key={stat.title} className="transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
