@@ -103,7 +103,7 @@ export default function LearnMorePage() {
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Logo />
         <Button asChild>
-          <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">Go to Dashboard</Link>
+          <Link href="/dashboard">Go to Dashboard</Link>
         </Button>
       </header>
       <main className="flex-grow">
@@ -123,7 +123,7 @@ export default function LearnMorePage() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button size="lg" asChild>
-                <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">
+                <Link href="/dashboard">
                   Get Started <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
