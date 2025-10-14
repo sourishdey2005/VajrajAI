@@ -191,49 +191,51 @@ export default function Home() {
         >
             <header className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                 <Logo />
-                <nav className="hidden md:flex items-center gap-8">
-                <Link
-                    href="#features"
-                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
-                >
-                    Features
-                </Link>
-                <Link
-                    href="#working"
-                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
-                >
-                    Working
-                </Link>
-                 <Link
-                    href="#benefits"
-                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
-                >
-                    Benefits
-                </Link>
-                <Link
-                    href="#tech-stack"
-                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
-                >
-                    Technology
-                </Link>
-                <Link
-                    href="#team"
-                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
-                >
-                    Team
-                </Link>
-                <Link
-                    href="/learn-more"
-                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
-                >
-                    Learn More
-                </Link>
-                </nav>
-                <Button asChild>
-                <Link href="https://vajraj-ai-diagonostics.vercel.app/login">
-                    Get Started
-                </Link>
-                </Button>
+                <div className="flex items-center gap-4">
+                  <nav className="hidden md:flex items-center gap-8">
+                  <Link
+                      href="#features"
+                      className="text-sm font-medium text-white hover:text-foreground transition-colors"
+                  >
+                      Features
+                  </Link>
+                  <Link
+                      href="#working"
+                      className="text-sm font-medium text-white hover:text-foreground transition-colors"
+                  >
+                      Working
+                  </Link>
+                  <Link
+                      href="#benefits"
+                      className="text-sm font-medium text-white hover:text-foreground transition-colors"
+                  >
+                      Benefits
+                  </Link>
+                  <Link
+                      href="#tech-stack"
+                      className="text-sm font-medium text-white hover:text-foreground transition-colors"
+                  >
+                      Technology
+                  </Link>
+                  <Link
+                      href="#team"
+                      className="text-sm font-medium text-white hover:text-foreground transition-colors"
+                  >
+                      Team
+                  </Link>
+                  <Link
+                      href="/learn-more"
+                      className="text-sm font-medium text-white hover:text-foreground transition-colors"
+                  >
+                      Learn More
+                  </Link>
+                  </nav>
+                  <Button asChild>
+                  <Link href="https://vajraj-ai-diagonostics.vercel.app/login">
+                      Get Started
+                  </Link>
+                  </Button>
+                </div>
             </header>
           <div className="absolute inset-0 bg-black/60 z-0"></div>
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in slide-in-from-bottom-24 duration-1000">
