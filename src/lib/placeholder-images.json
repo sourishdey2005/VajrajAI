@@ -51,8 +51,8 @@
     {
       "id": "landing-hero",
       "description": "Hero image for the landing page",
-      "imageUrl": "https://picsum.photos/seed/grid/1920/1080",
-      "imageHint": "power grid abstract"
+      "imageUrl": "https://picsum.photos/seed/substation/1920/1080",
+      "imageHint": "electrical substation"
     },
     {
       "id": "transformer-illustration",
