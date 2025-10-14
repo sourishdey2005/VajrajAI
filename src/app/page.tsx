@@ -45,20 +45,20 @@ export default function Home() {
   const testimonials = [
     {
       quote: "VajraAI has revolutionized our predictive maintenance program. We caught a critical fault in a key transformer weeks before it would have failed, saving us from a costly outage.",
-      name: "John D., Lead Engineer",
-      company: "PowerGrid Corp",
+      name: "Rajesh K., Lead Engineer",
+      company: "Bharat Power Corp",
       avatar: "https://picsum.photos/seed/testimonial1/100/100"
     },
     {
       quote: "The platform is incredibly user-friendly. The insights are clear and actionable, allowing our team to work more efficiently and with greater confidence.",
-      name: "Samantha R., Asset Manager",
-      company: "MegaWatt Utilities",
+      name: "Priya S., Asset Manager",
+      company: "Adani Power",
       avatar: "https://picsum.photos/seed/testimonial2/100/100"
     },
     {
       quote: "The speed and accuracy of the analysis are unparalleled. What used to take days of manual review now takes minutes. It's a game-changer for grid reliability.",
-      name: "David L., Substation Supervisor",
-      company: "National Energy",
+      name: "Amit V., Substation Supervisor",
+      company: "Reliance Energy",
       avatar: "https://picsum.photos/seed/testimonial3/100/100"
     },
   ];
