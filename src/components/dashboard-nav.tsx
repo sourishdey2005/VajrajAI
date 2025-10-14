@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   Workflow,
   Cpu,
+  Info,
 } from 'lucide-react';
 
 import {
@@ -50,6 +51,11 @@ export function DashboardNav() {
       href: '/dashboard/team',
       icon: <Users />,
       label: 'Team',
+    },
+    {
+      href: '/learn-more',
+      icon: <Info />,
+      label: 'Learn More',
     },
   ];
 

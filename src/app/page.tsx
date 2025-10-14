@@ -135,7 +135,7 @@ export default function Home() {
             <Link href="#tech-stack" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Technology</Link>
             <Link href="#team" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Team</Link>
             <Link href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Testimonials</Link>
-            <Link href="/dashboard/benefits" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Benefits</Link>
+            <Link href="/learn-more" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Learn More</Link>
         </nav>
         <Button asChild>
           <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">Get Started</Link>
@@ -158,7 +158,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                 <Link href="/dashboard/benefits">Learn More</Link>
+                 <Link href="/learn-more">Learn More</Link>
               </Button>
             </div>
           </div>
