@@ -237,43 +237,43 @@ export default function Home() {
                 <nav className="hidden md:flex items-center gap-6">
                 <Link
                     href="#features"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     Features
                 </Link>
                 <Link
                     href="#how-it-works"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     How It Works
                 </Link>
                  <Link
                     href="#benefits"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     Benefits
                 </Link>
                 <Link
                     href="#tech-stack"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     Technology
                 </Link>
                 <Link
                     href="#team"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     Team
                 </Link>
                 <Link
                     href="#testimonials"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     Testimonials
                 </Link>
                 <Link
                     href="/learn-more"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     Learn More
                 </Link>
@@ -286,17 +286,17 @@ export default function Home() {
             </header>
           <div className="absolute inset-0 bg-black/60 z-0"></div>
           <Image
-            src="https://picsum.photos/seed/substation-dusk/1920/1080"
+            src="https://www.gazabhindi.com/wp-content/uploads/2017/07/bijli-girna.jpg"
             alt="Hero background"
             fill
             className="object-cover -z-10"
-            data-ai-hint="substation dusk"
+            data-ai-hint="lightning strike"
           />
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in slide-in-from-bottom-24 duration-1000">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter text-white">
               Intelligent Transformer Diagnostics
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-200">
               VajraAI leverages state-of-the-art AI to analyze Frequency
               Response Analysis (FRA) data, providing rapid fault detection and
               actionable maintenance insights.
@@ -635,4 +635,5 @@ export default function Home() {
     
 
     
+
 
