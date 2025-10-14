@@ -2,7 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FileText, LayoutDashboard, Users } from 'lucide-react';
+import {
+  FileText,
+  LayoutDashboard,
+  Users,
+  CheckCircle2,
+  Workflow,
+} from 'lucide-react';
 
 import {
   SidebarMenu,
@@ -23,6 +29,16 @@ export function DashboardNav() {
       href: '/dashboard/analysis',
       icon: <FileText />,
       label: 'Analysis',
+    },
+    {
+      href: '/dashboard/how-it-works',
+      icon: <Workflow />,
+      label: 'How It Works',
+    },
+    {
+      href: '/dashboard/benefits',
+      icon: <CheckCircle2 />,
+      label: 'Benefits',
     },
     {
       href: '/dashboard/team',
