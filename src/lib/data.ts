@@ -8,32 +8,46 @@ import {
 export const teamMembers = [
   {
     id: 1,
-    name: 'Dr. Aris Thorne',
-    role: 'Chief AI Scientist',
-    bio: 'Lead architect of our core AI engine, with a Ph.D. in Signal Processing and Machine Learning.',
+    name: 'Shivam Prasad',
+    role: 'Team Leader',
+    bio: 'Leading the team to new heights of innovation and excellence in AI-driven diagnostics.',
     imageId: 'team-member-1',
   },
   {
     id: 2,
-    name: 'Jian Li',
-    role: 'Lead Field Engineer',
-    bio: 'Bridges the gap between data science and real-world transformer diagnostics with 15 years of experience.',
+    name: 'Nitish Kumar Pandit',
+    role: 'Team Member',
+    bio: 'A dedicated engineer contributing to the core development of our analytics platform.',
     imageId: 'team-member-2',
   },
   {
     id: 3,
-    name: 'Maya Singh',
-    role: 'Head of Product',
-    bio: 'Drives the product vision, ensuring our solutions are intuitive, powerful, and meet the needs of asset managers.',
+    name: 'Kushagra Mohan',
+    role: 'Team Member',
+    bio: 'A creative problem-solver focused on building intuitive and powerful user interfaces.',
     imageId: 'team-member-3',
   },
   {
     id: 4,
-    name: 'David Chen',
-    role: 'Senior Software Engineer',
-    bio: 'Expert in cloud infrastructure and data visualization, ensuring our platform is scalable and responsive.',
+    name: 'Sourish Dey',
+    role: 'Team Member',
+    bio: 'A data science enthusiast passionate about developing and refining our machine learning models.',
     imageId: 'team-member-4',
   },
+  {
+    id: 5,
+    name: 'Raja Kumar Rana',
+    role: 'Team Member',
+    bio: 'Specializing in backend systems and ensuring the reliability and scalability of our infrastructure.',
+    imageId: 'team-member-5',
+  },
+  {
+    id: 6,
+    name: 'Bharti Kumari',
+    role: 'Team Member',
+    bio: 'Focused on quality assurance and ensuring our platform delivers accurate and trustworthy results.',
+    imageId: 'team-member-6',
+  }
 ];
 
 export const dashboardStats = [

@@ -40,13 +40,25 @@
       "id": "team-member-3",
       "description": "Photo of team member 3",
       "imageUrl": "https://picsum.photos/seed/person3/400/400",
-      "imageHint": "professional woman"
+      "imageHint": "professional portrait"
     },
     {
       "id": "team-member-4",
       "description": "Photo of team member 4",
       "imageUrl": "https://picsum.photos/seed/person4/400/400",
-      "imageHint": "professional man"
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-5",
+      "description": "Photo of team member 5",
+      "imageUrl": "https://picsum.photos/seed/person5/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-6",
+      "description": "Photo of team member 6",
+      "imageUrl": "https://picsum.photos/seed/person6/400/400",
+      "imageHint": "professional portrait"
     },
     {
       "id": "landing-hero",
