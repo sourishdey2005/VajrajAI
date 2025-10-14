@@ -52,7 +52,7 @@ export default function DashboardPage() {
     <div className="grid gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {dashboardStats.map((stat, index) => (
-          <Card key={stat.title} className="animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+          <Card key={stat.title} className="transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
                 {stat.title}
@@ -75,7 +75,7 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-        <Card className="lg:col-span-4 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: '300ms' }}>
+        <Card className="lg:col-span-4 transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: '300ms' }}>
           <CardHeader>
             <CardTitle className="font-headline">Recent Analyses</CardTitle>
             <CardDescription>
@@ -113,7 +113,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card className="lg:col-span-3 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: '400ms' }}>
+        <Card className="lg:col-span-3 transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: '400ms' }}>
           <CardHeader>
             <CardTitle className="font-headline">Faults by Severity</CardTitle>
             <CardDescription>
