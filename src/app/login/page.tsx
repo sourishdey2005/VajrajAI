@@ -50,13 +50,13 @@ export default function LoginPage() {
                   Benefits
               </Link>
               <Link
-                  href="/#tech-stack"
+                  href="#tech-stack"
                   className="text-sm font-medium text-white hover:text-primary transition-colors"
               >
                   Technology
               </Link>
               <Link
-                  href="/#team"
+                  href="#team"
                   className="text-sm font-medium text-white hover:text-primary transition-colors"
               >
                   Team
@@ -70,12 +70,38 @@ export default function LoginPage() {
           </nav>
           <div className="flex-1 flex justify-end">
               <Button asChild>
-                  <Link href="/dashboard">Go to Dashboard</Link>
+                  <Link href="https://vajraj-ai-diagonostics.vercel.app/login">Get Started</Link>
               </Button>
           </div>
       </header>
       <main className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-12 md:py-24 pt-32 md:pt-40">
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-6xl">
+          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-right-24 duration-1000">
+            <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tighter">
+              Welcome
+            </h1>
+            <p className="max-w-md text-lg text-slate-200">
+              Empowering communities through fair and transparent digital
+              lending. Securely access your account or get started on your
+              journey.
+            </p>
+            <Card className="bg-primary/10 border-primary/20 max-w-md">
+              <CardHeader>
+                <CardTitle className="font-headline">Demo Credentials</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm space-y-2">
+                <div>
+                  <p className="font-semibold">Email: manager@vajra.ai</p>
+                  <p>Password: admin</p>
+                </div>
+                <div>
+                  <p className="font-semibold">Email: engineer@vajra.ai</p>
+                  <p>Password: user</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="animate-in fade-in slide-in-from-left-24 duration-1000">
             <Tabs defaultValue="manager" className="w-full max-w-md">
               <Card className="bg-card/90 backdrop-blur-sm">
@@ -212,33 +238,6 @@ export default function LoginPage() {
               </Card>
             </Tabs>
           </div>
-
-          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-right-24 duration-1000">
-            <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tighter">
-              Welcome
-            </h1>
-            <p className="max-w-md text-lg text-slate-200">
-              Empowering communities through fair and transparent digital
-              lending. Securely access your account or get started on your
-              journey.
-            </p>
-            <Card className="bg-primary/10 border-primary/20 max-w-md">
-              <CardHeader>
-                <CardTitle className="font-headline">Demo Credentials</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm space-y-2">
-                <div>
-                  <p className="font-semibold">Email: manager@vajra.ai</p>
-                  <p>Password: admin</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Email: engineer@vajra.ai</p>
-                  <p>Password: user</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
         </div>
       </main>
     </div>
