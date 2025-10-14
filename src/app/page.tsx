@@ -110,51 +110,6 @@ export default function Home() {
     },
   ];
 
-  const testimonials = [
-    {
-      quote:
-        'VajraAI has revolutionized our predictive maintenance program. We caught a critical fault in a key transformer weeks before it would have failed, saving us from a costly outage.',
-      name: 'Rajesh Kumar',
-      company: 'Bharat Power Corp',
-      avatar: 'https://picsum.photos/seed/testimonial1/100/100',
-    },
-    {
-      quote:
-        'The platform is incredibly user-friendly. The insights are clear and actionable, allowing our team to work more efficiently and with greater confidence.',
-      name: 'Priya Sharma',
-      company: 'Adani Power',
-      avatar: 'https://picsum.photos/seed/testimonial2/100/100',
-    },
-    {
-      quote:
-        "The speed and accuracy of the analysis are unparalleled. What used to take days of manual review now takes minutes. It's a game-changer for grid reliability.",
-      name: 'Amit Verma',
-      company: 'Reliance Energy',
-      avatar: 'https://picsum.photos/seed/testimonial3/100/100',
-    },
-    {
-      quote:
-        'Integrating VajraAI has been a paradigm shift for our operations. The predictive capabilities have drastically reduced our downtime and improved grid stability for millions in the capital.',
-      name: 'Vikram Singh',
-      company: 'Tata Power Delhi Distribution',
-      avatar: 'https://picsum.photos/seed/testimonial4/100/100',
-    },
-    {
-      quote:
-        'As a major power distributor in Southern India, reliability is everything. VajraAI gives us the foresight we need to manage our assets proactively. It\'s an essential tool for the modern utility.',
-      name: 'Lakshmi Rao',
-      company: 'Southern Power Distribution Company of Telangana',
-      avatar: 'https://picsum.photos/seed/testimonial5/100/100',
-    },
-    {
-      quote:
-        'The detailed fault classifications and maintenance recommendations have saved us countless man-hours. We can now focus our resources where they are needed most.',
-      name: 'Karan Desai',
-      company: 'West Bengal State Electricity Distribution Company',
-      avatar: 'https://picsum.photos/seed/testimonial6/100/100',
-    },
-  ];
-
   const technologies = [
     {
       icon: <Bot className="h-8 w-8 text-primary" />,
@@ -245,10 +200,10 @@ export default function Home() {
                     Features
                 </Link>
                 <Link
-                    href="#how-it-works"
+                    href="#working"
                     className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
-                    How It Works
+                    Working
                 </Link>
                  <Link
                     href="#benefits"
@@ -442,11 +397,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="how-it-works" className="py-20 md:py-28">
+        <section id="working" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                How It Works
+                Working
               </h2>
               <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
                 A simple, three-step process to transform your data into

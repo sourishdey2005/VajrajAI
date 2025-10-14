@@ -34,9 +34,9 @@ export function DashboardNav() {
       label: 'Analysis',
     },
     {
-      href: '/dashboard/how-it-works',
+      href: '/dashboard/working',
       icon: <Workflow />,
-      label: 'How It Works',
+      label: 'Working',
     },
     {
       href: '/dashboard/benefits',
