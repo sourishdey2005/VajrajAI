@@ -193,7 +193,7 @@ export default function Home() {
       <main className="flex-grow">
         <section
           className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center text-center py-24 md:py-32 lg:py-40 bg-card overflow-hidden parallax"
-          style={{ backgroundImage: `url(https://picsum.photos/seed/substation-dark/1920/1080)`}}
+          style={{ backgroundImage: `url(https://picsum.photos/seed/substation-at-night/1920/1080)`}}
         >
             <header className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                 <Logo />
@@ -266,7 +266,7 @@ export default function Home() {
 
         <section id="features" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Why VajraAI?
               </h2>
@@ -279,7 +279,7 @@ export default function Home() {
               {features.map((feature, index) => (
                 <Card
                   key={index}
-                  className="flex flex-col items-center text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-32 duration-1000"
+                  className="flex flex-col items-center text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-24 duration-1000"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <CardHeader>
@@ -369,7 +369,7 @@ export default function Home() {
 
         <section id="how-it-works" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 How It Works
               </h2>
@@ -382,7 +382,7 @@ export default function Home() {
               {howItWorksSteps.map((step, index) => (
                 <div
                   key={step.step}
-                  className="relative text-center animate-in fade-in slide-in-from-bottom-32 duration-1000"
+                  className="relative text-center animate-in fade-in slide-in-from-bottom-24 duration-1000"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <div className="flex items-center justify-center">
@@ -409,7 +409,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-background/80 z-0"></div>
           <div className="container relative z-10 mx-auto px-4 smpx-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Built with the Best
               </h2>
@@ -422,7 +422,7 @@ export default function Home() {
               {technologies.map((tech, index) => (
                 <Card
                   key={index}
-                  className="text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-32 duration-1000"
+                  className="text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-24 duration-1000"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <CardHeader className="flex flex-col items-center">
@@ -444,7 +444,7 @@ export default function Home() {
 
         <section id="team" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Meet the Team
               </h2>
@@ -459,7 +459,7 @@ export default function Home() {
                 return (
                   <Card
                     key={member.id}
-                    className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-32 duration-1000"
+                    className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000"
                     style={{ animationDelay: `${index * 150}ms` }}
                   >
                     <CardHeader className="items-center">
@@ -498,7 +498,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-background/80 z-0"></div>
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Trusted by Industry Leaders
               </h2>
@@ -510,7 +510,7 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="flex flex-col justify-between animate-in fade-in slide-in-from-bottom-32 duration-1000"
+                  className="flex flex-col justify-between animate-in fade-in slide-in-from-bottom-24 duration-1000"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <CardHeader>
@@ -554,3 +554,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
