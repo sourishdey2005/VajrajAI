@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { LogOut, User } from "lucide-react";
+import { LogOut } from "lucide-react";
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -49,8 +49,10 @@ export default function DashboardLayout({
                 <span className="font-semibold">Field Engineer</span>
                 <span className="text-muted-foreground text-xs">engineer@vajra.ai</span>
               </div>
-              <Button variant="ghost" size="icon" className="ml-auto">
-                <LogOut className="h-4 w-4" />
+              <Button variant="ghost" size="icon" className="ml-auto" asChild>
+                <Link href="/login">
+                    <LogOut className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
         </SidebarFooter>
@@ -81,9 +83,11 @@ export default function DashboardLayout({
               <DropdownMenuItem>Profile</DropdownMenuItem>
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <LogOut className="mr-2 h-4 w-4" />
-                <span>Log out</span>
+              <DropdownMenuItem asChild>
+                <Link href="/login">
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Log out</span>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
