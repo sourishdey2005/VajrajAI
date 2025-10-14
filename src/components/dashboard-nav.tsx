@@ -23,32 +23,32 @@ export function DashboardNav() {
 
   const navItems = [
     {
-      href: '/dashboard',
+      href: '/',
       icon: <LayoutDashboard />,
       label: 'Dashboard',
     },
     {
-      href: '/dashboard/analysis',
+      href: '/analysis',
       icon: <FileText />,
       label: 'Analysis',
     },
     {
-      href: '/dashboard/how-it-works',
+      href: '/how-it-works',
       icon: <Workflow />,
       label: 'How It Works',
     },
     {
-      href: '/dashboard/benefits',
+      href: '/benefits',
       icon: <CheckCircle2 />,
       label: 'Benefits',
     },
     {
-      href: '/dashboard/technology',
+      href: '/technology',
       icon: <Cpu />,
       label: 'Technology',
     },
     {
-      href: '/dashboard/team',
+      href: '/team',
       icon: <Users />,
       label: 'Team',
     },
@@ -65,13 +65,13 @@ export function DashboardNav() {
         <SidebarMenuItem key={item.href}>
           <SidebarMenuButton
             asChild
-            isActive={pathname === item.href}
+            isActive={pathname === `/dashboard${item.href === '/' ? '' : item.href}`}
             tooltip={{
               children: item.label,
               className: 'bg-sidebar-accent text-sidebar-accent-foreground',
             }}
           >
-            <Link href={item.href}>
+            <Link href={`/dashboard${item.href === '/' ? '' : item.href}`}>
               {item.icon}
               <span>{item.label}</span>
             </Link>
