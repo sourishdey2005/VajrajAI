@@ -16,6 +16,7 @@ import {
   ArrowDown,
 } from 'lucide-react';
 import { Logo } from '@/components/logo';
+import React from 'react';
 
 const benefits = [
   {
@@ -166,9 +167,8 @@ export default function LearnMorePage() {
             <div className="flex flex-col items-center">
               <div className="flex flex-col gap-8 w-full max-w-2xl">
                 {howItWorksSteps.map((step, index) => (
-                  <>
+                  <React.Fragment key={step.step}>
                     <Card
-                      key={step.step}
                       className="w-full transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-24 duration-1000"
                       style={{ animationDelay: `${index * 200}ms` }}
                     >
@@ -196,7 +196,7 @@ export default function LearnMorePage() {
                         <ArrowDown className="h-8 w-8 text-muted-foreground/50 animate-bounce" />
                       </div>
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
