@@ -153,7 +153,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button size="lg" asChild>
-                <Link href="/dashboard">
+                <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">
                   Go to Dashboard <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
