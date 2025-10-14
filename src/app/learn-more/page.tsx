@@ -107,8 +107,12 @@ export default function LearnMorePage() {
         </Button>
       </header>
       <main className="flex-grow">
-        <section className="relative py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
+        <section
+          className="relative py-20 md:py-28 bg-card parallax"
+          style={{ backgroundImage: `url(https://picsum.photos/seed/substation-dark/1920/1080)`}}
+        >
+          <div className="absolute inset-0 bg-black/60 z-0"></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-24 duration-1000 relative z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter">
               Transforming Grid Reliability with AI
             </h1>
@@ -155,8 +159,13 @@ export default function LearnMorePage() {
             </div>
         </section>
 
-        <section id="how-it-works" className="py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+          id="how-it-works"
+          className="py-20 md:py-28 bg-card parallax"
+          style={{ backgroundImage: `url(https://picsum.photos/seed/abstract-grid/1920/1080)`}}
+        >
+          <div className="absolute inset-0 bg-background/80 z-0"></div>
+          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-16 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">How It Works</h2>
               <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">

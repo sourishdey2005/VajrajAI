@@ -238,17 +238,11 @@ export default function Home() {
       </header>
 
       <main className="flex-grow">
-        <section className="relative py-24 md:py-32 lg:py-40 bg-card overflow-hidden">
-          {landingHeroImage && (
-            <Image
-              src={landingHeroImage.imageUrl}
-              alt={landingHeroImage.description}
-              fill
-              className="object-cover z-0 opacity-10"
-              data-ai-hint={landingHeroImage.imageHint}
-              priority
-            />
-          )}
+        <section
+          className="relative py-24 md:py-32 lg:py-40 bg-card overflow-hidden parallax"
+          style={{ backgroundImage: `url(https://picsum.photos/seed/substation-dark/1920/1080)`}}
+        >
+          <div className="absolute inset-0 bg-black/60 z-0"></div>
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter">
               Intelligent Transformer Diagnostics
@@ -306,8 +300,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="visualize" className="py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+          id="visualize"
+          className="py-20 md:py-28 bg-card parallax"
+          style={{ backgroundImage: `url(https://picsum.photos/seed/abstract-grid/1920/1080)`}}
+        >
+           <div className="absolute inset-0 bg-background/80 z-0"></div>
+          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="animate-in fade-in slide-in-from-left-24 duration-1000">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
@@ -404,8 +403,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="tech-stack" className="py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 smpx-6 lg:px-8">
+        <section
+          id="tech-stack"
+          className="py-20 md:py-28 bg-card parallax"
+          style={{ backgroundImage: `url(https://picsum.photos/seed/tech-bg/1920/1080)`}}
+        >
+          <div className="absolute inset-0 bg-background/80 z-0"></div>
+          <div className="container relative z-10 mx-auto px-4 smpx-6 lg:px-8">
             <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Built with the Best
@@ -488,8 +492,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" className="py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+          id="testimonials"
+          className="py-20 md:py-28 bg-card parallax"
+          style={{ backgroundImage: `url(https://picsum.photos/seed/city-power/1920/1080)`}}
+        >
+          <div className="absolute inset-0 bg-background/80 z-0"></div>
+          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Trusted by Industry Leaders
