@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Bot, UploadCloud, Wrench, Quote, Cog, Sparkles, Palette, Shapes, Wind, LineChart, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Bot, UploadCloud, Wrench, Quote, Cog, Sparkles, Palette, Shapes, Wind, LineChart, Github, Linkedin, Twitter, BrainCircuit, Table2, Sigma } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { teamMembers } from "@/lib/data";
@@ -46,82 +46,82 @@ export default function Home() {
   const testimonials = [
     {
       quote: "VajraAI has revolutionized our predictive maintenance program. We caught a critical fault in a key transformer weeks before it would have failed, saving us from a costly outage.",
-      name: "Rajesh K., Lead Engineer",
+      name: "Rajesh Kumar",
       company: "Bharat Power Corp",
       avatar: "https://picsum.photos/seed/testimonial1/100/100"
     },
     {
       quote: "The platform is incredibly user-friendly. The insights are clear and actionable, allowing our team to work more efficiently and with greater confidence.",
-      name: "Priya S., Asset Manager",
+      name: "Priya Sharma",
       company: "Adani Power",
       avatar: "https://picsum.photos/seed/testimonial2/100/100"
     },
     {
       quote: "The speed and accuracy of the analysis are unparalleled. What used to take days of manual review now takes minutes. It's a game-changer for grid reliability.",
-      name: "Amit V., Substation Supervisor",
+      name: "Amit Verma",
       company: "Reliance Energy",
       avatar: "https://picsum.photos/seed/testimonial3/100/100"
     },
     {
       quote: "Integrating VajraAI has been a paradigm shift for our operations. The predictive capabilities have drastically reduced our downtime and improved grid stability for millions in the capital.",
-      name: "Vikram Singh, Head of Operations",
+      name: "Vikram Singh",
       company: "Tata Power Delhi Distribution",
       avatar: "https://picsum.photos/seed/testimonial4/100/100"
     },
     {
       quote: "As a major power distributor in Southern India, reliability is everything. VajraAI gives us the foresight we need to manage our assets proactively. It's an essential tool for the modern utility.",
-      name: "Lakshmi Rao, Chief of Grid Operations",
-      company: "Southern Power Distribution Company",
+      name: "Lakshmi Rao",
+      company: "Southern Power Distribution Company of Telangana",
       avatar: "https://picsum.photos/seed/testimonial5/100/100"
     },
     {
       quote: "The detailed fault classifications and maintenance recommendations have saved us countless man-hours. We can now focus our resources where they are needed most.",
-      name: "Karan Desai, Maintenance Director",
-      company: "West-India Power Transmission Ltd.",
+      name: "Karan Desai",
+      company: "West Bengal State Electricity Distribution Company",
       avatar: "https://picsum.photos/seed/testimonial6/100/100"
     }
   ];
 
   const technologies = [
     {
-        icon: <Cog className="h-8 w-8 text-primary" />,
-        title: 'Next.js',
-        description: 'A powerful React framework for performant, server-rendered applications.'
+        icon: <Bot className="h-8 w-8 text-primary" />,
+        title: 'Google AI & Genkit',
+        description: 'Leveraging cutting-edge large language models from Google to provide deep analysis of FRA data.'
     },
     {
-        icon: <Sparkles className="h-8 w-8 text-primary" />,
-        title: 'React',
-        description: 'The most popular JavaScript library for building dynamic user interfaces.'
+        icon: <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 fill-primary"><path d="M12.332 24H5.337a1.332 1.332 0 0 1-1.332-1.332V8.337c0-.737.595-1.332 1.332-1.332h9.33c.737 0 1.332.595 1.332 1.332v3.665h-2.664V9.669H6.669v11.997h5.663v-2.664h2.664v4.002c0 .737-.595 1.33-1.332 1.33zM18.663 0h-9.33a1.332 1.332 0 0 0-1.332 1.332v3.665h2.664V2.664h7.998v12h-5.664v2.664h7.001a1.332 1.332 0 0 0 1.332-1.332V1.332A1.332 1.332 0 0 0 18.663 0z"/></svg>,
+        title: 'Python',
+        description: 'The core language for our data science backend, enabling powerful and efficient analysis.'
+    },
+    {
+        icon: <BrainCircuit className="h-8 w-8 text-primary" />,
+        title: 'Scikit-learn',
+        description: 'Essential for building predictive models that classify faults and assess transformer health.'
+    },
+    {
+        icon: <Table2 className="h-8 w-8 text-primary" />,
+        title: 'Pandas',
+        description: 'The cornerstone of our data manipulation and analysis workflow for large datasets.'
+    },
+    {
+        icon: <Sigma className="h-8 w-8 text-primary" />,
+        title: 'NumPy',
+        description: 'Fundamental for scientific computing and handling complex numerical operations.'
+    },
+    {
+        icon: <Cog className="h-8 w-8 text-primary" />,
+        title: 'Next.js & React',
+        description: 'The foundation for a responsive user interface to visualize data and insights.'
     },
     {
         icon: <Palette className="h-8 w-8 text-primary" />,
         title: 'Tailwind CSS',
-        description: 'A utility-first CSS framework for rapidly building custom, modern designs.'
-    },
-    {
-        icon: <Shapes className="h-8 w-8 text-primary" />,
-        title: 'ShadCN UI',
-        description: 'Beautifully designed and accessible components for a stunning user interface.'
-    },
-    {
-        icon: <Bot className="h-8 w-8 text-primary" />,
-        title: 'Genkit & Google AI',
-        description: 'State-of-the-art generative AI to power our intelligent diagnostic features.'
-    },
-    {
-        icon: <Wind className="h-8 w-8 text-primary" />,
-        title: 'Lucide React',
-        description: 'A vast library of clean and consistent icons to enhance usability.'
-    },
-    {
-        icon: <LineChart className="h-8 w-8 text-primary" />,
-        title: 'Recharts',
-        description: 'Interactive charts to visualize complex transformer data effectively.'
+        description: 'A utility-first CSS framework for rapidly building a clear and intuitive user interface.'
     },
      {
-        icon: <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 fill-primary"><path d="M1.5 0 h21 l-1.915 21.512 h-17.17 L1.5 0 Z M4.085 3 h15.83 l-1.6 18 h-12.63 L4.085 3 Z M12 14.125 h5.42 l-.352 3.96 h-5.068 v-3.96 Z M12 8.01 h5.532 l-.352 3.99 H12 V8.01 Z m-1.012 1.488 v2.484 H6.42l-.24-2.484 H10.988 Z m.002 4.024 V18 H6.872 l-.24-2.464 H10.99 Z"/></svg>,
-        title: 'TypeScript',
-        description: 'Ensuring code quality and developer productivity with static typing.'
+        icon: <LineChart className="h-8 w-8 text-primary" />,
+        title: 'Recharts',
+        description: 'Creating interactive charts to visualize complex transformer frequency response data.'
     },
   ]
 
