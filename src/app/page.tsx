@@ -242,7 +242,7 @@ export default function Home() {
             </header>
           <div className="absolute inset-0 bg-black/60 z-0"></div>
           <Image 
-            src="https://picsum.photos/seed/substation-at-dusk/1920/1080"
+            src="https://picsum.photos/seed/substation-dusk/1920/1080"
             alt="Hero background"
             fill
             className="object-cover -z-10"
@@ -560,6 +560,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-    
