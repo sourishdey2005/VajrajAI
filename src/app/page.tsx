@@ -2,7 +2,7 @@
 'use client';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import {
   ArrowRight,
   Bot,
@@ -221,6 +221,10 @@ export default function Home() {
   const transformerImage = PlaceHolderImages.find(
     (img) => img.id === 'transformer-illustration'
   );
+  
+  const getImage = (imageId: string) => {
+    return PlaceHolderImages.find((img) => img.id === imageId);
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -530,7 +534,10 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {teamMembers.map((member, index) => {
-                const image = `https://picsum.photos/seed/person${member.id}/400/400`;
+                const image = getImage(member.imageId);
+                const avatarImage = image ? image.imageUrl : `https://picsum.photos/seed/person${member.id}/400/400`;
+                const avatarHint = image ? image.imageHint : "professional portrait";
+
                 return (
                   <Card
                     key={member.id}
@@ -539,7 +546,7 @@ export default function Home() {
                   >
                     <CardHeader className="items-center">
                       <Avatar className="h-24 w-24 mb-4">
-                        <AvatarImage src={image} alt={member.name} />
+                        <AvatarImage src={avatarImage} alt={member.name} data-ai-hint={avatarHint} />
                         <AvatarFallback>
                           {member.name.charAt(0)}
                         </AvatarFallback>
@@ -554,11 +561,11 @@ export default function Home() {
                         {member.bio}
                       </p>
                     </CardContent>
-                    <CardContent className="flex justify-center gap-4">
+                    <CardFooter className="justify-center gap-4">
                       <Twitter className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer" />
                       <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer" />
                       <Github className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer" />
-                    </CardContent>
+                    </CardFooter>
                   </Card>
                 );
               })}
@@ -629,5 +636,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
