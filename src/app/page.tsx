@@ -18,6 +18,7 @@ import {
   Github,
   Linkedin,
   Twitter,
+  CheckCircle2,
 } from 'lucide-react';
 import { Logo } from '@/components/logo';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -73,6 +74,39 @@ export default function Home() {
       title: 'Receive Insights',
       description:
         'Get a detailed report with a clear summary, fault classification, severity level, and a list of prioritized, actionable recommendations for your maintenance team.',
+    },
+  ];
+
+    const benefits = [
+    {
+      title: 'Increased Reliability',
+      description:
+        'Proactively identify and address potential transformer faults before they lead to catastrophic failures and costly outages, ensuring a stable power grid.',
+    },
+    {
+      title: 'Optimized Maintenance',
+      description:
+        'Move from time-based to condition-based maintenance. Our AI-driven insights help you prioritize repairs, allocate resources effectively, and reduce unnecessary servicing.',
+    },
+    {
+      title: 'Reduced Costs',
+      description:
+        'Minimize expenses related to unplanned downtime, emergency repairs, and premature asset replacement. Extend the lifespan of your transformers with targeted maintenance.',
+    },
+    {
+      title: 'Enhanced Safety',
+      description:
+        'By identifying potential risks early, VajraAI helps mitigate safety hazards associated with transformer failure, protecting personnel and the public.',
+    },
+    {
+      title: 'Data-Driven Decisions',
+      description:
+        'Leverage objective, AI-powered analysis to make informed decisions about asset management, capital investment, and long-term grid strategy.',
+    },
+    {
+      title: 'Improved Efficiency',
+      description:
+        'Automate the time-consuming process of FRA data analysis. Our platform delivers comprehensive reports in minutes, freeing up your expert engineers for high-value tasks.',
     },
   ];
 
@@ -209,6 +243,12 @@ export default function Home() {
                 >
                     How It Works
                 </Link>
+                 <Link
+                    href="#benefits"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    Benefits
+                </Link>
                 <Link
                     href="#tech-stack"
                     className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -304,6 +344,35 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        <section id="benefits" className="py-20 md:py-28 bg-card">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-16 duration-1000">
+                    <h2 className="text-3xl md:text-4xl font-bold font-headline">The VajraAI Advantage</h2>
+                    <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
+                    Discover how our intelligent diagnostics platform drives reliability, efficiency, and cost savings.
+                    </p>
+                </div>
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {benefits.map((benefit, index) => (
+                    <Card key={index} className="transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+                        <CardHeader className="flex flex-row items-start gap-4">
+                        <CheckCircle2 className="h-8 w-8 text-primary mt-1" />
+                        <div>
+                            <CardTitle className="font-headline text-xl">
+                            {benefit.title}
+                            </CardTitle>
+                        </div>
+                        </CardHeader>
+                        <CardContent>
+                        <p className="text-muted-foreground">{benefit.description}</p>
+                        </CardContent>
+                    </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+
 
         <section
           id="visualize"
@@ -560,3 +629,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

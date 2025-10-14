@@ -138,7 +138,7 @@ export default function DashboardPage() {
                   content={<ChartTooltipContent indicator="dot" />}
                 />
                  <ChartLegend content={<ChartLegendContent />} />
-                <Bar dataKey="value" radius={4} />
+                <Bar dataKey="value" radius={4} fill="var(--color-value)" />
               </BarChart>
             </ChartContainer>
           </CardContent>
@@ -147,3 +147,5 @@ export default function DashboardPage() {
     </div>
   );
 }
+
+    

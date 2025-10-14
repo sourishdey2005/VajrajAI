@@ -65,13 +65,13 @@ export function DashboardNav() {
         <SidebarMenuItem key={item.href}>
           <SidebarMenuButton
             asChild
-            isActive={pathname === `/dashboard${item.href === '/' ? '' : item.href}`}
+            isActive={pathname === item.href || (pathname.startsWith('/dashboard') && item.href !=='/' && pathname.includes(item.href)) || (pathname === '/dashboard' && item.href === '/')}
             tooltip={{
               children: item.label,
               className: 'bg-sidebar-accent text-sidebar-accent-foreground',
             }}
           >
-            <Link href={`/dashboard${item.href === '/' ? '' : item.href}`}>
+            <Link href={item.href === '/' ? '/dashboard' : item.href}>
               {item.icon}
               <span>{item.label}</span>
             </Link>
@@ -81,3 +81,5 @@ export function DashboardNav() {
     </SidebarMenu>
   );
 }
+
+    
