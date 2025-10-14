@@ -7,13 +7,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { teamMembers } from "@/lib/data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
 export default function TeamPage() {
-  const getImage = (imageId: string) => {
-    return PlaceHolderImages.find((img) => img.id === imageId);
-  };
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-16 duration-1000">
@@ -25,19 +21,11 @@ export default function TeamPage() {
       </div>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {teamMembers.map((member, index) => {
-          const image = getImage(member.imageId);
-          const avatarImage = image ? image.imageUrl : `https://picsum.photos/seed/person${member.id}/400/400`;
-          const avatarHint = image ? image.imageHint : "professional portrait";
           return (
             <Card key={member.id} className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
               <CardHeader className="items-center">
                 <Avatar className="h-24 w-24 mb-4">
-                    <AvatarImage
-                      src={avatarImage}
-                      alt={member.name}
-                      data-ai-hint={avatarHint}
-                    />
-                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                  <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
                 <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
                 <p className="text-sm text-primary">{member.role}</p>
