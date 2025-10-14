@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -103,7 +104,7 @@ export default function LearnMorePage() {
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Logo />
         <Button asChild>
-          <Link href="https://vajraj-ai-diagonostics.vercel.app/login">Go to Dashboard</Link>
+          <Link href="/dashboard">Go to Dashboard</Link>
         </Button>
       </header>
       <main className="flex-grow">
