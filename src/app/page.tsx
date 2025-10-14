@@ -286,7 +286,7 @@ export default function Home() {
             </header>
           <div className="absolute inset-0 bg-black/60 z-0"></div>
           <Image
-            src="https://www.gazabhindi.com/wp-content/uploads/2017/07/bijli-girna.jpg"
+            src="https://picsum.photos/seed/lightning/1920/1080"
             alt="Hero background"
             fill
             className="object-cover -z-10"
@@ -330,7 +330,7 @@ export default function Home() {
                 <Card
                   key={index}
                   className="flex flex-col items-center text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-24 duration-1000"
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  style={{ animationDelay: `${'${index * 200}'}ms` }}
                 >
                   <CardHeader>
                     {feature.icon}
@@ -359,7 +359,7 @@ export default function Home() {
                 </div>
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {benefits.map((benefit, index) => (
-                    <Card key={index} className="transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+                    <Card key={index} className="transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${'${index * 150}'}ms` }}>
                         <CardHeader className="flex flex-row items-start gap-4">
                         <CheckCircle2 className="h-8 w-8 text-primary mt-1" />
                         <div>
@@ -462,7 +462,7 @@ export default function Home() {
                 <div
                   key={step.step}
                   className="relative text-center animate-in fade-in slide-in-from-bottom-24 duration-1000"
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  style={{ animationDelay: `${'${index * 200}'}ms` }}
                 >
                   <div className="flex items-center justify-center">
                     <div className="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground text-3xl font-bold font-headline">
@@ -502,7 +502,7 @@ export default function Home() {
                 <Card
                   key={index}
                   className="text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-24 duration-1000"
-                  style={{ animationDelay: `${index * 150}ms` }}
+                  style={{ animationDelay: `${'${index * 150}'}ms` }}
                 >
                   <CardHeader className="flex flex-col items-center">
                     {tech.icon}
@@ -538,7 +538,7 @@ export default function Home() {
                   <Card
                     key={member.id}
                     className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000"
-                    style={{ animationDelay: `${index * 150}ms` }}
+                    style={{ animationDelay: `${'${index * 150}'}ms` }}
                   >
                     <CardHeader className="items-center">
                       <Avatar className="h-24 w-24 mb-4">
@@ -588,7 +588,7 @@ export default function Home() {
                 <Card
                   key={index}
                   className="flex flex-col justify-between animate-in fade-in slide-in-from-bottom-24 duration-1000"
-                  style={{ animationDelay: `${index * 150}ms` }}
+                  style={{ animationDelay: `${'${index * 150}'}ms` }}
                 >
                   <CardHeader>
                     <Quote className="h-8 w-8 text-primary" />
@@ -635,5 +635,6 @@ export default function Home() {
     
 
     
+
 
 
