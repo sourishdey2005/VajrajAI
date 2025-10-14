@@ -190,60 +190,59 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <Logo />
-        <nav className="hidden md:flex items-center gap-6">
-          <Link
-            href="#features"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Features
-          </Link>
-          <Link
-            href="#how-it-works"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            How It Works
-          </Link>
-          <Link
-            href="#tech-stack"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Technology
-          </Link>
-          <Link
-            href="#team"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Team
-          </Link>
-          <Link
-            href="#testimonials"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Testimonials
-          </Link>
-          <Link
-            href="/learn-more"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Learn More
-          </Link>
-        </nav>
-        <Button asChild>
-          <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">
-            Get Started
-          </Link>
-        </Button>
-      </header>
-
       <main className="flex-grow">
         <section
-          className="relative py-24 md:py-32 lg:py-40 bg-card overflow-hidden parallax"
+          className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center text-center py-24 md:py-32 lg:py-40 bg-card overflow-hidden parallax"
           style={{ backgroundImage: `url(https://picsum.photos/seed/substation-dark/1920/1080)`}}
         >
+            <header className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                <Logo />
+                <nav className="hidden md:flex items-center gap-6">
+                <Link
+                    href="#features"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    Features
+                </Link>
+                <Link
+                    href="#how-it-works"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    How It Works
+                </Link>
+                <Link
+                    href="#tech-stack"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    Technology
+                </Link>
+                <Link
+                    href="#team"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    Team
+                </Link>
+                <Link
+                    href="#testimonials"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    Testimonials
+                </Link>
+                <Link
+                    href="/learn-more"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    Learn More
+                </Link>
+                </nav>
+                <Button asChild>
+                <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">
+                    Get Started
+                </Link>
+                </Button>
+            </header>
           <div className="absolute inset-0 bg-black/60 z-0"></div>
-          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
+          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in slide-in-from-bottom-24 duration-1000">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter">
               Intelligent Transformer Diagnostics
             </h1>
@@ -302,7 +301,7 @@ export default function Home() {
 
         <section
           id="visualize"
-          className="py-20 md:py-28 bg-card parallax"
+          className="relative py-20 md:py-28 bg-card parallax"
           style={{ backgroundImage: `url(https://picsum.photos/seed/abstract-grid/1920/1080)`}}
         >
            <div className="absolute inset-0 bg-background/80 z-0"></div>
@@ -405,7 +404,7 @@ export default function Home() {
 
         <section
           id="tech-stack"
-          className="py-20 md:py-28 bg-card parallax"
+          className="relative py-20 md:py-28 bg-card parallax"
           style={{ backgroundImage: `url(https://picsum.photos/seed/tech-bg/1920/1080)`}}
         >
           <div className="absolute inset-0 bg-background/80 z-0"></div>
@@ -494,7 +493,7 @@ export default function Home() {
 
         <section
           id="testimonials"
-          className="py-20 md:py-28 bg-card parallax"
+          className="relative py-20 md:py-28 bg-card parallax"
           style={{ backgroundImage: `url(https://picsum.photos/seed/city-power/1920/1080)`}}
         >
           <div className="absolute inset-0 bg-background/80 z-0"></div>
