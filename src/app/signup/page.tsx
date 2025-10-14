@@ -10,6 +10,13 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import Link from "next/link";
 
 export default function SignUpPage() {
@@ -109,12 +116,25 @@ export default function SignUpPage() {
                         required
                         />
                     </div>
+                     <div className="grid gap-2">
+                        <Label htmlFor="role">Role</Label>
+                        <Select>
+                          <SelectTrigger id="role">
+                            <SelectValue placeholder="Select your role" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="manager">Manager</SelectItem>
+                            <SelectItem value="engineer">Engineer</SelectItem>
+                            <SelectItem value="user">User</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
                     <div className="grid gap-2">
                         <Label htmlFor="password">Password</Label>
                         <Input id="password" type="password" required />
                     </div>
-                    <Button type="submit" className="w-full">
-                        Create Account
+                    <Button type="submit" className="w-full" asChild>
+                      <Link href="/dashboard">Create Account</Link>
                     </Button>
                 </div>
                 <div className="mt-4 text-center text-sm text-muted-foreground">
@@ -131,4 +151,3 @@ export default function SignUpPage() {
     </div>
   );
 }
-
