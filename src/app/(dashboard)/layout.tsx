@@ -1,3 +1,4 @@
+
 import { DashboardNav } from "@/components/dashboard-nav";
 import { Logo } from "@/components/logo";
 import {
@@ -11,8 +12,16 @@ import {
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { LogOut } from "lucide-react";
+import { LogOut, User } from "lucide-react";
 import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function DashboardLayout({
   children,
@@ -47,18 +56,40 @@ export default function DashboardLayout({
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
-        <header className="flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
-          <div className="md:hidden">
-            <SidebarTrigger />
+        <header className="flex h-16 items-center justify-between gap-4 border-b bg-background px-4 md:px-6">
+          <div className="flex items-center gap-4">
+            <div className="md:hidden">
+              <SidebarTrigger />
+            </div>
+            <h1 className="text-xl font-semibold font-headline tracking-tight">
+              VajraAI Dashboard
+            </h1>
           </div>
-          <h1 className="text-xl font-semibold font-headline tracking-tight">
-            VajraAI Dashboard
-          </h1>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Avatar className="h-8 w-8">
+                  <AvatarImage src="https://picsum.photos/seed/user/100/100" alt="User" />
+                  <AvatarFallback>FE</AvatarFallback>
+                </Avatar>
+                 <span className="sr-only">Toggle user menu</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <LogOut className="mr-2 h-4 w-4" />
+                <span>Log out</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </header>
         <main className="flex-1 p-4 md:p-6">{children}</main>
       </SidebarInset>
     </SidebarProvider>
   );
 }
-
-    
