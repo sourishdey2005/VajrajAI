@@ -10,102 +10,226 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Separator } from "@/components/ui/separator";
-import { Github, Chrome } from "lucide-react";
-import Image from "next/image";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { SiApple } from '@icons-pack/react-simple-icons';
-
 
 export default function LoginPage() {
   return (
-    <div className="w-full min-h-screen lg:grid lg:grid-cols-2">
-      <div className="flex items-center justify-center py-12">
-        <div className="mx-auto grid w-[380px] gap-6">
-          <div className="grid gap-4 text-center">
-            <div className="flex justify-center">
-                <Logo />
-            </div>
-            <h1 className="text-3xl font-bold font-headline">VajraAI Diagnostics</h1>
-            <p className="text-balance text-muted-foreground">
-              Login to access the future of transformer fault analysis
+    <div className="relative min-h-screen w-full bg-background text-white">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url(https://picsum.photos/seed/cityscape/1920/1080)",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+      <header className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <Logo />
+        <nav className="hidden md:flex items-center gap-8 justify-center flex-1">
+          <Link
+            href="/#features"
+            className="text-sm font-medium text-white hover:text-primary transition-colors"
+          >
+            Features
+          </Link>
+          <Link
+            href="/#working"
+            className="text-sm font-medium text-white hover:text-primary transition-colors"
+          >
+            Working
+          </Link>
+          <Link
+            href="/#tech-stack"
+            className="text-sm font-medium text-white hover:text-primary transition-colors"
+          >
+            Technology
+          </Link>
+          <Link
+            href="/about"
+            className="text-sm font-medium text-white hover:text-primary transition-colors"
+          >
+            About
+          </Link>
+          <Link
+            href="/#team"
+            className="text-sm font-medium text-white hover:text-primary transition-colors"
+          >
+            Team
+          </Link>
+        </nav>
+        <Button variant="outline" asChild>
+          <Link href="/dashboard">Go to Dashboard</Link>
+        </Button>
+      </header>
+      <main className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-12 md:py-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-6xl">
+          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-left-24 duration-1000">
+            <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tighter">
+              Welcome
+            </h1>
+            <p className="max-w-md text-lg text-slate-200">
+              Empowering communities through fair and transparent digital
+              lending. Securely access your account or get started on your
+              journey.
             </p>
+            <Card className="bg-primary/10 border-primary/20 max-w-md">
+              <CardHeader>
+                <CardTitle className="font-headline">Demo Credentials</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm space-y-2">
+                <div>
+                  <p className="font-semibold">Email: manager@vajra.ai</p>
+                  <p>Password: admin</p>
+                </div>
+                <div>
+                  <p className="font-semibold">Email: engineer@vajra.ai</p>
+                  <p>Password: user</p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-          <div className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="manager@vajra.ai"
-                required
-                defaultValue="manager@vajra.ai"
-              />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="role">Role</Label>
-              <Select defaultValue="manager">
-                <SelectTrigger>
-                  <SelectValue placeholder="Select a role" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="manager">Manager</SelectItem>
-                  <SelectItem value="engineer">Engineer</SelectItem>
-                  <SelectItem value="admin">Administrator</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="grid gap-2">
-              <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
-                <Link
-                  href="/forgot-password"
-                  className="ml-auto inline-block text-sm underline"
-                >
-                  Forgot password?
-                </Link>
-              </div>
-              <Input id="password" type="password" required defaultValue="-"/>
-            </div>
-            <Button type="submit" className="w-full">
-              Login
-            </Button>
-          </div>
-          <div className="relative">
-            <Separator />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-background text-muted-foreground text-sm">
-                OR CONTINUE WITH
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-              <Button variant="outline">
-                  <Chrome className="mr-2 h-4 w-4" />
-                  Google
-              </Button>
-              <Button variant="outline">
-                  <SiApple className="mr-2 h-4 w-4" />
-                  Apple
-              </Button>
+
+          <div className="animate-in fade-in slide-in-from-right-24 duration-1000">
+            <Tabs defaultValue="manager" className="w-full max-w-md">
+              <Card className="bg-card/90 backdrop-blur-sm">
+                <CardHeader>
+                  <TabsList className="grid w-full grid-cols-3">
+                    <TabsTrigger value="manager">Manager</TabsTrigger>
+                    <TabsTrigger value="engineer">Engineer</TabsTrigger>
+                    <TabsTrigger value="signup">Sign Up</TabsTrigger>
+                  </TabsList>
+                </CardHeader>
+                <TabsContent value="manager">
+                  <CardContent className="space-y-6">
+                    <CardTitle className="text-center font-headline text-2xl">
+                      Sign in as Manager
+                    </CardTitle>
+                    <div className="grid gap-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="email-manager">Email Address</Label>
+                        <Input
+                          id="email-manager"
+                          type="email"
+                          placeholder="manager@vajra.ai"
+                          required
+                          defaultValue="manager@vajra.ai"
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="password-manager">Password</Label>
+                        <Input
+                          id="password-manager"
+                          type="password"
+                          required
+                          defaultValue="admin"
+                        />
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <Checkbox id="remember-manager" />
+                          <Label htmlFor="remember-manager" className="text-sm font-normal">Remember Me</Label>
+                        </div>
+                        <Link
+                          href="#"
+                          className="text-sm text-primary hover:underline"
+                        >
+                          Lost your password?
+                        </Link>
+                      </div>
+                      <Button type="submit" className="w-full">
+                        Sign in as Manager
+                      </Button>
+                    </div>
+                  </CardContent>
+                </TabsContent>
+                <TabsContent value="engineer">
+                   <CardContent className="space-y-6">
+                    <CardTitle className="text-center font-headline text-2xl">
+                      Sign in as Engineer
+                    </CardTitle>
+                    <div className="grid gap-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="email-engineer">Email Address</Label>
+                        <Input
+                          id="email-engineer"
+                          type="email"
+                          placeholder="engineer@vajra.ai"
+                          required
+                           defaultValue="engineer@vajra.ai"
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="password-engineer">Password</Label>
+                        <Input
+                          id="password-engineer"
+                          type="password"
+                          required
+                          defaultValue="user"
+                        />
+                      </div>
+                       <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <Checkbox id="remember-engineer" />
+                          <Label htmlFor="remember-engineer" className="text-sm font-normal">Remember Me</Label>
+                        </div>
+                        <Link
+                          href="#"
+                          className="text-sm text-primary hover:underline"
+                        >
+                          Lost your password?
+                        </Link>
+                      </div>
+                      <Button type="submit" className="w-full">
+                        Sign in as Engineer
+                      </Button>
+                    </div>
+                  </CardContent>
+                </TabsContent>
+                 <TabsContent value="signup">
+                   <CardContent className="space-y-6">
+                    <CardTitle className="text-center font-headline text-2xl">
+                      Create an Account
+                    </CardTitle>
+                    <div className="grid gap-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="email-signup">Email Address</Label>
+                        <Input
+                          id="email-signup"
+                          type="email"
+                          placeholder="you@example.com"
+                          required
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="password-signup">Password</Label>
+                        <Input
+                          id="password-signup"
+                          type="password"
+                          required
+                        />
+                      </div>
+                       <div className="grid gap-2">
+                        <Label htmlFor="password-confirm">Confirm Password</Label>
+                        <Input
+                          id="password-confirm"
+                          type="password"
+                          required
+                        />
+                      </div>
+                      <Button type="submit" className="w-full">
+                        Sign Up
+                      </Button>
+                    </div>
+                  </CardContent>
+                </TabsContent>
+              </Card>
+            </Tabs>
           </div>
         </div>
-      </div>
-      <div className="hidden bg-muted lg:block">
-        <Image
-          src="https://picsum.photos/seed/ocean-wave/1080/1920"
-          alt="Image"
-          width="1920"
-          height="1080"
-          className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
-          data-ai-hint="ocean wave"
-        />
-      </div>
+      </main>
     </div>
   );
 }
