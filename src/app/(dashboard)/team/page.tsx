@@ -9,7 +9,6 @@ import {
 import { teamMembers } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import Image from "next/image";
 
 export default function TeamPage() {
   const getImage = (imageId: string) => {
@@ -27,17 +26,17 @@ export default function TeamPage() {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {teamMembers.map((member, index) => {
           const image = getImage(member.imageId);
+          const avatarImage = image ? image.imageUrl : `https://picsum.photos/seed/person${member.id}/400/400`;
+          const avatarHint = image ? image.imageHint : "professional portrait";
           return (
             <Card key={member.id} className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
               <CardHeader className="items-center">
                 <Avatar className="h-24 w-24 mb-4">
-                  {image && (
                     <AvatarImage
-                      src={image.imageUrl}
+                      src={avatarImage}
                       alt={member.name}
-                      data-ai-hint={image.imageHint}
+                      data-ai-hint={avatarHint}
                     />
-                  )}
                   <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <CardTitle className="font-headline text-xl">{member.name}</CardTitle>

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Bot, UploadCloud, Wrench, Quote, Cog, Sparkles, Palette, Shapes, Wind, LineChart } from "lucide-react";
+import { ArrowRight, Bot, UploadCloud, Wrench, Quote, Cog, Sparkles, Palette, Shapes, Wind, LineChart, Github, Linkedin, Twitter } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { teamMembers } from "@/lib/data";
 
 export default function Home() {
   const features = [
@@ -132,6 +133,7 @@ export default function Home() {
             <Link href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Features</Link>
             <Link href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">How It Works</Link>
             <Link href="#tech-stack" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Technology</Link>
+            <Link href="#team" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Team</Link>
             <Link href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Testimonials</Link>
             <Link href="/dashboard/benefits" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Benefits</Link>
         </nav>
@@ -236,7 +238,46 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" className="py-20 md:py-28 bg-card">
+        <section id="team" className="py-20 md:py-28 bg-card">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">Meet the Team</h2>
+              <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
+                The minds behind the innovation, dedicated to advancing grid reliability.
+              </p>
+            </div>
+            <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {teamMembers.map((member, index) => {
+                const image = `https://picsum.photos/seed/person${member.id}/400/400`;
+                return (
+                  <Card key={member.id} className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
+                    <CardHeader className="items-center">
+                      <Avatar className="h-24 w-24 mb-4">
+                        <AvatarImage
+                          src={image}
+                          alt={member.name}
+                        />
+                        <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                      <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
+                      <p className="text-sm text-primary">{member.role}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground text-sm">{member.bio}</p>
+                    </CardContent>
+                    <CardContent className="flex justify-center gap-4">
+                      <Twitter className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer" />
+                      <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer" />
+                      <Github className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer" />
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonials" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Trusted by Industry Leaders</h2>
