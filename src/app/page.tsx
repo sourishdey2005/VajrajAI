@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Bot, UploadCloud, Wrench, Quote, Cog, Sparkles, Palette, Shapes, Wind, LineChart, Github, Linkedin, Twitter, BrainCircuit, Table2, Sigma } from "lucide-react";
+import { ArrowRight, Bot, UploadCloud, Wrench, Quote, Cog, Sparkles, Palette, Shapes, Wind, LineChart, Github, Linkedin, Twitter, BrainCircuit, Table2, Sigma, Box, Lock, Layers } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { teamMembers } from "@/lib/data";
@@ -86,7 +86,7 @@ export default function Home() {
     {
         icon: <Bot className="h-8 w-8 text-primary" />,
         title: 'Google AI & Genkit',
-        description: 'Leveraging cutting-edge large language models from Google to provide deep analysis of FRA data.'
+        description: 'Leveraging cutting-edge large language models for deep analysis and human-readable insights.'
     },
     {
         icon: <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 fill-primary"><path d="M12.332 24H5.337a1.332 1.332 0 0 1-1.332-1.332V8.337c0-.737.595-1.332 1.332-1.332h9.33c.737 0 1.332.595 1.332 1.332v3.665h-2.664V9.669H6.669v11.997h5.663v-2.664h2.664v4.002c0 .737-.595 1.33-1.332 1.33zM18.663 0h-9.33a1.332 1.332 0 0 0-1.332 1.332v3.665h2.664V2.664h7.998v12h-5.664v2.664h7.001a1.332 1.332 0 0 0 1.332-1.332V1.332A1.332 1.332 0 0 0 18.663 0z"/></svg>,
@@ -96,32 +96,32 @@ export default function Home() {
     {
         icon: <BrainCircuit className="h-8 w-8 text-primary" />,
         title: 'Scikit-learn',
-        description: 'Essential for building predictive models that classify faults and assess transformer health.'
+        description: 'Building predictive models that classify faults and assess transformer health with high accuracy.'
+    },
+    {
+        icon: <Shapes className="h-8 w-8 text-primary" />,
+        title: 'TensorFlow & PyTorch',
+        description: 'Utilizing deep learning frameworks for more nuanced fault detection and predictive analytics.'
+    },
+    {
+        icon: <Sparkles className="h-8 w-8 text-primary" />,
+        title: 'Explainable AI (XAI)',
+        description: 'Providing transparency into our models\' decisions, building trust in the AI-driven insights.'
+    },
+    {
+        icon: <Lock className="h-8 w-8 text-primary" />,
+        title: 'Hyperledger Fabric',
+        description: 'Employing blockchain for an immutable, transparent, and auditable log of all data analyses.'
     },
     {
         icon: <Table2 className="h-8 w-8 text-primary" />,
-        title: 'Pandas',
-        description: 'The cornerstone of our data manipulation and analysis workflow for large datasets.'
+        title: 'Pandas & NumPy',
+        description: 'The cornerstone of our data manipulation and scientific computing for large datasets.'
     },
     {
-        icon: <Sigma className="h-8 w-8 text-primary" />,
-        title: 'NumPy',
-        description: 'Fundamental for scientific computing and handling complex numerical operations.'
-    },
-    {
-        icon: <Cog className="h-8 w-8 text-primary" />,
-        title: 'Next.js & React',
-        description: 'The foundation for a responsive user interface to visualize data and insights.'
-    },
-    {
-        icon: <Palette className="h-8 w-8 text-primary" />,
-        title: 'Tailwind CSS',
-        description: 'A utility-first CSS framework for rapidly building a clear and intuitive user interface.'
-    },
-     {
-        icon: <LineChart className="h-8 w-8 text-primary" />,
-        title: 'Recharts',
-        description: 'Creating interactive charts to visualize complex transformer frequency response data.'
+        icon: <Layers className="h-8 w-8 text-primary" />,
+        title: 'Docker & Kubernetes',
+        description: 'Containerizing our application for scalable, resilient, and consistent deployment.'
     },
   ]
 

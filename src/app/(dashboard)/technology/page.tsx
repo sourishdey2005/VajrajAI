@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Bot, Cog, Cpu, LineChart, Palette, Shapes, Sparkles, Wind, Code, Table2, BrainCircuit, Sigma } from 'lucide-react';
+import { Bot, Cog, Cpu, LineChart, Palette, Shapes, Sparkles, Wind, Code, Table2, BrainCircuit, Sigma, Box, Lock, Layers } from 'lucide-react';
 import { SiTypescript } from '@icons-pack/react-simple-icons';
 
 const technologies = [
@@ -23,6 +23,21 @@ const technologies = [
         icon: <BrainCircuit className="h-8 w-8 text-primary" />,
         title: 'Scikit-learn',
         description: 'The essential machine learning library for building predictive models that classify faults and assess transformer health with high accuracy.'
+    },
+    {
+        icon: <Shapes className="h-8 w-8 text-primary" />,
+        title: 'TensorFlow & PyTorch',
+        description: 'Utilizing deep learning frameworks to build and train advanced neural networks for more nuanced fault detection and predictive analytics.'
+    },
+    {
+        icon: <Sparkles className="h-8 w-8 text-primary" />,
+        title: 'Explainable AI (XAI)',
+        description: 'Implementing techniques like LIME and SHAP to provide transparency into our models\' decisions, building trust and confidence in the AI-driven insights.'
+    },
+    {
+        icon: <Lock className="h-8 w-8 text-primary" />,
+        title: 'Hyperledger Fabric',
+        description: 'Employing blockchain technology to create an immutable, transparent, and auditable log of all data analyses and maintenance activities for enhanced security.'
     },
     {
         icon: <Table2 className="h-8 w-8 text-primary" />,
@@ -48,6 +63,11 @@ const technologies = [
         icon: <LineChart className="h-8 w-8 text-primary" />,
         title: 'Recharts',
         description: 'Creating interactive and informative charts to visualize complex transformer frequency response data effectively.'
+    },
+     {
+        icon: <Layers className="h-8 w-8 text-primary" />,
+        title: 'Docker & Kubernetes',
+        description: 'Containerizing our application and services for scalable, resilient, and consistent deployment across any environment.'
     },
 ]
 
