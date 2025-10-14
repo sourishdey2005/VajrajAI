@@ -230,7 +230,10 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
         <section
-          className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center text-center py-24 md:py-32 lg:py-40 bg-card overflow-hidden"
+          className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center text-center py-24 md:py-32 lg:py-40 bg-card overflow-hidden parallax"
+          style={{
+            backgroundImage: `url(https://picsum.photos/seed/lightning-strike/1920/1080)`,
+          }}
         >
             <header className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                 <Logo />
@@ -285,13 +288,6 @@ export default function Home() {
                 </Button>
             </header>
           <div className="absolute inset-0 bg-black/60 z-0"></div>
-          <Image
-            src="https://picsum.photos/seed/hero-background/1920/1080"
-            alt="Hero background"
-            fill
-            className="object-cover -z-10"
-            data-ai-hint="lightning strike dramatic"
-          />
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in slide-in-from-bottom-24 duration-1000">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter text-white">
               Intelligent Transformer Diagnostics
@@ -631,11 +627,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-
-
-
