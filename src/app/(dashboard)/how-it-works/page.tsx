@@ -1,3 +1,4 @@
+
 import {
   Card,
   CardContent,
@@ -5,6 +6,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { ArrowDown, Bot, UploadCloud, FileText } from 'lucide-react';
+import React from 'react';
 
 const howItWorksSteps = [
   {
@@ -44,9 +46,8 @@ export default function HowItWorksPage() {
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-8 w-full max-w-2xl">
           {howItWorksSteps.map((step, index) => (
-            <>
+            <React.Fragment key={step.step}>
               <Card
-                key={step.step}
                 className="w-full transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-24 duration-1000"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
@@ -74,7 +75,7 @@ export default function HowItWorksPage() {
                   <ArrowDown className="h-8 w-8 text-muted-foreground/50 animate-bounce" />
                 </div>
               )}
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
