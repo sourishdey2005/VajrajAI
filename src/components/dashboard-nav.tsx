@@ -8,6 +8,7 @@ import {
   Users,
   CheckCircle2,
   Workflow,
+  Cpu,
 } from 'lucide-react';
 
 import {
@@ -39,6 +40,11 @@ export function DashboardNav() {
       href: '/dashboard/benefits',
       icon: <CheckCircle2 />,
       label: 'Benefits',
+    },
+    {
+      href: '/dashboard/technology',
+      icon: <Cpu />,
+      label: 'Technology',
     },
     {
       href: '/dashboard/team',
