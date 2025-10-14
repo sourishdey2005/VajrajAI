@@ -54,9 +54,9 @@ export function DashboardNav() {
       label: 'Team',
     },
     {
-      href: '/learn-more',
+      href: '/about',
       icon: <Info />,
-      label: 'Learn More',
+      label: 'About',
     },
   ];
 

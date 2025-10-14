@@ -186,7 +186,7 @@ export default function Home() {
         <section
           className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center text-center py-24 md:py-32 lg:py-40 bg-card overflow-hidden parallax"
           style={{
-            backgroundImage: `url(https://picsum.photos/seed/lightning-strike/1920/1080)`,
+            backgroundImage: `url(https://www.gazabhindi.com/wp-content/uploads/2017/07/bijli-girna.jpg)`,
           }}
         >
             <header className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -225,10 +225,10 @@ export default function Home() {
                         Team
                     </Link>
                     <Link
-                        href="/learn-more"
+                        href="/about"
                         className="text-sm font-medium text-white hover:text-foreground transition-colors"
                     >
-                        Learn More
+                        About
                     </Link>
                 </nav>
                 <div className="flex-1 flex justify-end">
@@ -256,7 +256,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/learn-more">Learn More</Link>
+                <Link href="/about">About Us</Link>
               </Button>
             </div>
           </div>
