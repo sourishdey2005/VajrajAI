@@ -8,7 +8,6 @@ import {
   Bot,
   UploadCloud,
   Wrench,
-  Quote,
   Layers,
   BrainCircuit,
   Table2,
@@ -21,7 +20,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { Logo } from '@/components/logo';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { teamMembers, faultsBySeverityData, faultsBySeverityConfig } from '@/lib/data';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -192,7 +191,7 @@ export default function Home() {
         >
             <header className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                 <Logo />
-                <nav className="hidden md:flex items-center gap-6">
+                <nav className="hidden md:flex items-center gap-8">
                 <Link
                     href="#features"
                     className="text-sm font-medium text-white hover:text-foreground transition-colors"
@@ -222,12 +221,6 @@ export default function Home() {
                     className="text-sm font-medium text-white hover:text-foreground transition-colors"
                 >
                     Team
-                </Link>
-                <Link
-                    href="#testimonials"
-                    className="text-sm font-medium text-white hover:text-foreground transition-colors"
-                >
-                    Testimonials
                 </Link>
                 <Link
                     href="/learn-more"
