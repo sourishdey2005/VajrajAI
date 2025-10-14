@@ -78,7 +78,34 @@ export default function LoginPage() {
       </header>
       <main className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-12 md:py-24 pt-32 md:pt-40">
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-6xl">
-          <div className="animate-in fade-in slide-in-from-left-24 duration-1000">
+          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-left-24 duration-1000">
+            <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tighter">
+              Welcome Back
+            </h1>
+            <p className="max-w-md text-lg text-slate-200">
+              Log in to access your dashboard, analyze new FRA data, and review AI-driven maintenance recommendations for your transformer fleet.
+            </p>
+            <Card className="bg-primary/10 border-primary/20 max-w-md">
+              <CardHeader>
+                <CardTitle className="font-headline">Demo Credentials</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm space-y-2">
+                <div>
+                  <p className="font-semibold">Email: manager@vajra.ai</p>
+                  <p>Password: admin</p>
+                </div>
+                <div>
+                  <p className="font-semibold">Email: engineer@vajra.ai</p>
+                  <p>Password: user</p>
+                </div>
+                 <div>
+                  <p className="font-semibold">Email: user@vajra.ai</p>
+                  <p>Password: password</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="animate-in fade-in slide-in-from-right-24 duration-1000">
             <Tabs defaultValue="manager" className="w-full max-w-md">
               <Card className="bg-card/90 backdrop-blur-sm">
                 <CardHeader>
@@ -126,8 +153,14 @@ export default function LoginPage() {
                         </Link>
                       </div>
                       <Button type="submit" className="w-full">
-                        Sign in as Manager
+                        Sign in
                       </Button>
+                      <div className="text-center text-sm text-muted-foreground">
+                        Don&apos;t have an account?{' '}
+                        <Link href="#" className="text-primary hover:underline">
+                          Sign Up
+                        </Link>
+                      </div>
                     </div>
                   </CardContent>
                 </TabsContent>
@@ -169,8 +202,14 @@ export default function LoginPage() {
                         </Link>
                       </div>
                       <Button type="submit" className="w-full">
-                        Sign in as Engineer
+                        Sign in
                       </Button>
+                       <div className="text-center text-sm text-muted-foreground">
+                        Don&apos;t have an account?{' '}
+                        <Link href="#" className="text-primary hover:underline">
+                          Sign Up
+                        </Link>
+                      </div>
                     </div>
                   </CardContent>
                 </TabsContent>
@@ -212,42 +251,19 @@ export default function LoginPage() {
                         </Link>
                       </div>
                       <Button type="submit" className="w-full">
-                        Sign in as User
+                        Sign in
                       </Button>
+                       <div className="text-center text-sm text-muted-foreground">
+                        Don&apos;t have an account?{' '}
+                        <Link href="#" className="text-primary hover:underline">
+                          Sign Up
+                        </Link>
+                      </div>
                     </div>
                   </CardContent>
                 </TabsContent>
               </Card>
             </Tabs>
-          </div>
-          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-right-24 duration-1000">
-            <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tighter">
-              Welcome
-            </h1>
-            <p className="max-w-md text-lg text-slate-200">
-              Empowering communities through fair and transparent digital
-              lending. Securely access your account or get started on your
-              journey.
-            </p>
-            <Card className="bg-primary/10 border-primary/20 max-w-md">
-              <CardHeader>
-                <CardTitle className="font-headline">Demo Credentials</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm space-y-2">
-                <div>
-                  <p className="font-semibold">Email: manager@vajra.ai</p>
-                  <p>Password: admin</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Email: engineer@vajra.ai</p>
-                  <p>Password: user</p>
-                </div>
-                 <div>
-                  <p className="font-semibold">Email: user@vajra.ai</p>
-                  <p>Password: password</p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </main>
