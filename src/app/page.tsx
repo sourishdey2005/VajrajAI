@@ -564,58 +564,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="testimonials"
-          className="relative py-20 md:py-28 bg-card parallax"
-          style={{ backgroundImage: `url(https://picsum.photos/seed/city-power/1920/1080)`}}
-        >
-          <div className="absolute inset-0 bg-background/80 z-0"></div>
-          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
-              <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                Trusted by Industry Leaders
-              </h2>
-              <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
-                See what our partners are saying about VajraAI.
-              </p>
-            </div>
-            <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {testimonials.map((testimonial, index) => (
-                <Card
-                  key={index}
-                  className="flex flex-col justify-between animate-in fade-in slide-in-from-bottom-24 duration-1000"
-                  style={{ animationDelay: `${'${index * 150}'}ms` }}
-                >
-                  <CardHeader>
-                    <Quote className="h-8 w-8 text-primary" />
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground italic">
-                      "{testimonial.quote}"
-                    </p>
-                  </CardContent>
-                  <CardContent className="flex items-center gap-4">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                      />
-                      <AvatarFallback>
-                        {testimonial.name.charAt(0)}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {testimonial.company}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        
       </main>
 
       <footer className="bg-card border-t">
