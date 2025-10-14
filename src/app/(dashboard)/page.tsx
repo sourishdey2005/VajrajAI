@@ -1,3 +1,4 @@
+
 import {
   Card,
   CardContent,
@@ -39,8 +40,10 @@ export default function DashboardPage() {
         return 'destructive';
       case 'medium':
         return 'secondary';
-      default:
+      case 'healthy':
         return 'default';
+      default:
+        return 'outline';
     }
   };
 
@@ -48,14 +51,9 @@ export default function DashboardPage() {
 
   return (
     <div className="grid gap-8 animate-in fade-in slide-in-from-bottom-16 duration-1000">
-      <div>
-        <h1 className="text-3xl font-bold font-headline">Welcome back, Field Engineer!</h1>
-        <p className="text-muted-foreground mt-1">Here's a snapshot of your transformer fleet's health.</p>
-      </div>
-
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {dashboardStats.map((stat, index) => (
-          <Card key={stat.title} className="transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+          <Card key={stat.title} className="transition-all hover:shadow-lg hover:-translate-y-1">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
                 {stat.title}
@@ -77,8 +75,8 @@ export default function DashboardPage() {
         ))}
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-        <Card className="lg:col-span-4 transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: '300ms' }}>
+      <div className="grid gap-8">
+        <Card className="transition-all hover:shadow-lg hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="font-headline">Recent Analyses</CardTitle>
             <CardDescription>
@@ -116,7 +114,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card className="lg:col-span-3 transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: '400ms' }}>
+        <Card className="transition-all hover:shadow-lg hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="font-headline">Faults by Severity</CardTitle>
             <CardDescription>
