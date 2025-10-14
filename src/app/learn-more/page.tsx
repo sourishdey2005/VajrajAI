@@ -103,7 +103,7 @@ export default function LearnMorePage() {
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Logo />
         <Button asChild>
-          <Link href="/dashboard">Go to Dashboard</Link>
+          <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">Go to Dashboard</Link>
         </Button>
       </header>
       <main className="flex-grow">
