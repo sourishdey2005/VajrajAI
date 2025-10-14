@@ -144,7 +144,7 @@ export default function Home() {
 
       <main className="flex-grow">
         <section className="relative py-24 md:py-32 lg:py-40 bg-card">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tighter">
               Intelligent Transformer Diagnostics
             </h1>
@@ -158,7 +158,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                 <Link href="#features">Learn More</Link>
+                 <Link href="/dashboard/benefits">Learn More</Link>
               </Button>
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function Home() {
 
         <section id="features" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Why VajraAI?</h2>
               <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
                 Empower your team with predictive maintenance and prevent critical failures.
@@ -174,7 +174,7 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               {features.map((feature, index) => (
-                <Card key={index} className="flex flex-col items-center text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 200}ms` }}>
+                <Card key={index} className="flex flex-col items-center text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-32 duration-1000" style={{ animationDelay: `${index * 200}ms` }}>
                   <CardHeader>
                     {feature.icon}
                     <CardTitle className="mt-4 font-headline">{feature.title}</CardTitle>
@@ -190,7 +190,7 @@ export default function Home() {
 
         <section id="how-it-works" className="py-20 md:py-28 bg-card">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">How It Works</h2>
               <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
                 A simple, three-step process to transform your data into actionable intelligence.
@@ -198,7 +198,7 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-12 md:grid-cols-3">
               {howItWorksSteps.map((step, index) => (
-                <div key={step.step} className="relative text-center animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 200}ms` }}>
+                <div key={step.step} className="relative text-center animate-in fade-in slide-in-from-bottom-32 duration-1000" style={{ animationDelay: `${index * 200}ms` }}>
                   <div className="flex items-center justify-center">
                     <div className="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground text-3xl font-bold font-headline">
                       {step.step}
@@ -214,7 +214,7 @@ export default function Home() {
         
         <section id="tech-stack" className="py-20 md:py-28">
           <div className="container mx-auto px-4 smpx-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Built with the Best</h2>
                 <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
                     Our platform is built on a foundation of modern, reliable, and scalable technologies.
@@ -222,7 +222,7 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {technologies.map((tech, index) => (
-                    <Card key={index} className="text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+                    <Card key={index} className="text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-32 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
                         <CardHeader className="flex flex-col items-center">
                             {tech.icon}
                             <CardTitle className="mt-4 font-headline text-xl leading-snug">
@@ -240,7 +240,7 @@ export default function Home() {
 
         <section id="team" className="py-20 md:py-28 bg-card">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Meet the Team</h2>
               <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
                 The minds behind the innovation, dedicated to advancing grid reliability.
@@ -250,7 +250,7 @@ export default function Home() {
               {teamMembers.map((member, index) => {
                 const image = `https://picsum.photos/seed/person${member.id}/400/400`;
                 return (
-                  <Card key={member.id} className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+                  <Card key={member.id} className="text-center transition-all hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-32 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
                     <CardHeader className="items-center">
                       <Avatar className="h-24 w-24 mb-4">
                         <AvatarImage
@@ -279,7 +279,7 @@ export default function Home() {
 
         <section id="testimonials" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-16 duration-1000">
+            <div className="text-center animate-in fade-in slide-in-from-bottom-24 duration-1000">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Trusted by Industry Leaders</h2>
               <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
                 See what our partners are saying about VajraAI.
@@ -287,7 +287,7 @@ export default function Home() {
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="flex flex-col justify-between animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+                <Card key={index} className="flex flex-col justify-between animate-in fade-in slide-in-from-bottom-32 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
                   <CardHeader>
                     <Quote className="h-8 w-8 text-primary" />
                   </CardHeader>
