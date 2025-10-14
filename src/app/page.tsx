@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Bot, UploadCloud, Wrench, Quote } from "lucide-react";
+import { ArrowRight, Bot, UploadCloud, Wrench, Quote, Cog, Sparkles, Palette, Shapes, Wind, LineChart } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -81,6 +81,49 @@ export default function Home() {
     }
   ];
 
+  const technologies = [
+    {
+        icon: <Cog className="h-8 w-8 text-primary" />,
+        title: 'Next.js',
+        description: 'A powerful React framework for performant, server-rendered applications.'
+    },
+    {
+        icon: <Sparkles className="h-8 w-8 text-primary" />,
+        title: 'React',
+        description: 'The most popular JavaScript library for building dynamic user interfaces.'
+    },
+    {
+        icon: <Palette className="h-8 w-8 text-primary" />,
+        title: 'Tailwind CSS',
+        description: 'A utility-first CSS framework for rapidly building custom, modern designs.'
+    },
+    {
+        icon: <Shapes className="h-8 w-8 text-primary" />,
+        title: 'ShadCN UI',
+        description: 'Beautifully designed and accessible components for a stunning user interface.'
+    },
+    {
+        icon: <Bot className="h-8 w-8 text-primary" />,
+        title: 'Genkit & Google AI',
+        description: 'State-of-the-art generative AI to power our intelligent diagnostic features.'
+    },
+    {
+        icon: <Wind className="h-8 w-8 text-primary" />,
+        title: 'Lucide React',
+        description: 'A vast library of clean and consistent icons to enhance usability.'
+    },
+    {
+        icon: <LineChart className="h-8 w-8 text-primary" />,
+        title: 'Recharts',
+        description: 'Interactive charts to visualize complex transformer data effectively.'
+    },
+     {
+        icon: <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 fill-primary"><path d="M1.5 0 h21 l-1.915 21.512 h-17.17 L1.5 0 Z M4.085 3 h15.83 l-1.6 18 h-12.63 L4.085 3 Z M12 14.125 h5.42 l-.352 3.96 h-5.068 v-3.96 Z M12 8.01 h5.532 l-.352 3.99 H12 V8.01 Z m-1.012 1.488 v2.484 H6.42l-.24-2.484 H10.988 Z m.002 4.024 V18 H6.872 l-.24-2.464 H10.99 Z"/></svg>,
+        title: 'TypeScript',
+        description: 'Ensuring code quality and developer productivity with static typing.'
+    },
+  ]
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -88,6 +131,7 @@ export default function Home() {
         <nav className="hidden md:flex items-center gap-6">
             <Link href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Features</Link>
             <Link href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">How It Works</Link>
+            <Link href="#tech-stack" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Technology</Link>
             <Link href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Testimonials</Link>
             <Link href="/dashboard/benefits" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Benefits</Link>
         </nav>
@@ -107,7 +151,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button size="lg" asChild>
-                <Link href="https://9000-firebase-studio-1760367559810.cluster-ulqnojp5endvgve6krhe7klaws.cloudworkstations.dev/login">
+                <Link href="/dashboard">
                   Go to Dashboard <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -165,8 +209,34 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        <section id="tech-stack" className="py-20 md:py-28">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">Built with the Best</h2>
+                <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
+                    Our platform is built on a foundation of modern, reliable, and scalable technologies.
+                </p>
+            </div>
+            <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                {technologies.map((tech, index) => (
+                    <Card key={index} className="text-center p-6 transition-all transform hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
+                        <CardHeader className="flex flex-col items-center">
+                            {tech.icon}
+                            <CardTitle className="mt-4 font-headline text-xl leading-snug">
+                                {tech.title}
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground text-sm">{tech.description}</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+          </div>
+        </section>
 
-        <section id="testimonials" className="py-20 md:py-28">
+        <section id="testimonials" className="py-20 md:py-28 bg-card">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Trusted by Industry Leaders</h2>
