@@ -152,8 +152,8 @@ export default function LoginPage() {
                           Lost your password?
                         </Link>
                       </div>
-                      <Button type="submit" className="w-full">
-                        Sign in
+                      <Button type="submit" className="w-full" asChild>
+                        <Link href="/dashboard">Sign in</Link>
                       </Button>
                       <div className="text-center text-sm text-muted-foreground">
                         Don&apos;t have an account?{' '}
@@ -201,8 +201,8 @@ export default function LoginPage() {
                           Lost your password?
                         </Link>
                       </div>
-                      <Button type="submit" className="w-full">
-                        Sign in
+                      <Button type="submit" className="w-full" asChild>
+                        <Link href="/dashboard">Sign in</Link>
                       </Button>
                        <div className="text-center text-sm text-muted-foreground">
                         Don&apos;t have an account?{' '}
@@ -250,8 +250,8 @@ export default function LoginPage() {
                           Lost your password?
                         </Link>
                       </div>
-                      <Button type="submit" className="w-full">
-                        Sign in
+                      <Button type="submit" className="w-full" asChild>
+                        <Link href="/dashboard">Sign in</Link>
                       </Button>
                        <div className="text-center text-sm text-muted-foreground">
                         Don&apos;t have an account?{' '}
