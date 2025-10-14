@@ -53,7 +53,7 @@ const technologies = [
 
 export default function TechnologyPage() {
     return (
-        <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000">
+        <div className="animate-in fade-in slide-in-from-bottom-16 duration-1000">
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold font-headline">Technology Stack</h1>
                 <p className="mt-3 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -62,7 +62,7 @@ export default function TechnologyPage() {
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {technologies.map((tech, index) => (
-                    <Card key={index} className="transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 100}ms` }}>
+                    <Card key={index} className="transition-all hover:shadow-lg animate-in fade-in slide-in-from-bottom-24 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
                         <CardHeader className="flex flex-row items-start gap-4">
                             {tech.icon}
                             <CardTitle className="font-headline text-xl leading-snug">
