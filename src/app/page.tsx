@@ -61,6 +61,24 @@ export default function Home() {
       company: "Reliance Energy",
       avatar: "https://picsum.photos/seed/testimonial3/100/100"
     },
+    {
+      quote: "Integrating VajraAI has been a paradigm shift for our operations. The predictive capabilities have drastically reduced our downtime and improved grid stability for millions in the capital.",
+      name: "Vikram Singh, Head of Operations",
+      company: "Tata Power Delhi Distribution",
+      avatar: "https://picsum.photos/seed/testimonial4/100/100"
+    },
+    {
+      quote: "As a major power distributor in Southern India, reliability is everything. VajraAI gives us the foresight we need to manage our assets proactively. It's an essential tool for the modern utility.",
+      name: "Lakshmi Rao, Chief of Grid Operations",
+      company: "Southern Power Distribution Company",
+      avatar: "https://picsum.photos/seed/testimonial5/100/100"
+    },
+    {
+      quote: "The detailed fault classifications and maintenance recommendations have saved us countless man-hours. We can now focus our resources where they are needed most.",
+      name: "Karan Desai, Maintenance Director",
+      company: "West-India Power Transmission Ltd.",
+      avatar: "https://picsum.photos/seed/testimonial6/100/100"
+    }
   ];
 
   return (
@@ -156,7 +174,7 @@ export default function Home() {
                 See what our partners are saying about VajraAI.
               </p>
             </div>
-            <div className="mt-16 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
+            <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="flex flex-col justify-between">
                   <CardHeader>
