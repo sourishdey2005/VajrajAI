@@ -233,7 +233,7 @@ export default function Home() {
                 </nav>
                 <div className="flex-1 flex justify-end">
                     <Button asChild>
-                        <Link href="/login">
+                        <Link href="https://vajra-ai.netlify.app/login">
                             Get Started
                         </Link>
                     </Button>
@@ -251,7 +251,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button size="lg" asChild>
-                <Link href="/dashboard">
+                <Link href="https://vajra-ai.netlify.app/login">
                   Go to Dashboard <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

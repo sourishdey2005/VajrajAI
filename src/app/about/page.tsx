@@ -105,7 +105,7 @@ export default function AboutPage() {
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Logo />
         <Button asChild>
-          <Link href="/dashboard">Go to Dashboard</Link>
+          <Link href="https://vajra-ai.netlify.app/login">Go to Dashboard</Link>
         </Button>
       </header>
       <main className="flex-grow">
@@ -125,7 +125,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button size="lg" asChild>
-                <Link href="/login">
+                <Link href="https://vajra-ai.netlify.app/login">
                   Get Started <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

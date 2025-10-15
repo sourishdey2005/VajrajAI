@@ -1,4 +1,5 @@
 
+
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import {
@@ -77,7 +78,7 @@ export default function SignUpPage() {
           </nav>
           <div className="flex-1 flex justify-end">
               <Button asChild>
-                  <Link href="/login">Get Started</Link>
+                  <Link href="https://vajra-ai.netlify.app/login">Get Started</Link>
               </Button>
           </div>
       </header>

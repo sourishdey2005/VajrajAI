@@ -1,4 +1,5 @@
 
+
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import {
@@ -72,7 +73,7 @@ export default function LoginPage() {
           </nav>
           <div className="flex-1 flex justify-end">
               <Button asChild>
-                  <Link href="/login">Get Started</Link>
+                  <Link href="https://vajra-ai.netlify.app/login">Get Started</Link>
               </Button>
           </div>
       </header>
@@ -202,7 +203,7 @@ export default function LoginPage() {
                         </Link>
                       </div>
                       <Button type="submit" className="w-full" asChild>
-                        <Link href="/dashboard">Sign in</Link>
+                        <Link href="/dashboard/engineer">Sign in</Link>
                       </Button>
                        <div className="text-center text-sm text-muted-foreground">
                         Don&apos;t have an account?{' '}
@@ -251,7 +252,7 @@ export default function LoginPage() {
                         </Link>
                       </div>
                       <Button type="submit" className="w-full" asChild>
-                        <Link href="/dashboard">Sign in</Link>
+                        <Link href="/dashboard/user">Sign in</Link>
                       </Button>
                        <div className="text-center text-sm text-muted-foreground">
                         Don&apos;t have an account?{' '}
